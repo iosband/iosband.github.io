@@ -97,10 +97,91 @@ textarea {
 
 
 
-body {
+/*body {
     margin: 60px auto;
     width: 70%;
+}*/
+
+body{
+    margin: 0 auto;
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+    color: #444444;
+    line-height: 1;
+    max-width: 960px;
+    padding: 30px;
 }
+h1, h2, h3, h4 {
+    color: #111111;
+    font-weight: 400;
+}
+h1, h2, h3, h4, h5, p {
+    margin-bottom: 24px;
+    padding: 0;
+}
+h1 {
+    font-size: 48px;
+}
+h2 {
+    font-size: 36px;
+    /* The bottom margin is small. It's designed to be used with gray meta text
+     * below a post title. */
+    margin: 24px 0 6px;
+}
+h3 {
+    font-size: 24px;
+}
+h4 {
+    font-size: 21px;
+}
+h5 {
+    font-size: 18px;
+}
+
+code {
+    font-family: Consolas, Monaco, Andale Mono, monospace;
+    padding: 0;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    font-size: 85%;
+    background-color: rgba(0,0,0,0.04);
+    border-radius: 3px;
+}
+
+aside {
+    display: block;
+    float: right;
+    width: 390px;
+}
+
+blockquote {
+    border-left:.5em solid #eee;
+    padding: 0 2em;
+    margin-left:0;
+    max-width: 476px;
+    border-radius: 3px;
+}
+
+blockquote  cite {
+    font-size:14px;
+    line-height:20px;
+    color:#bfbfbf;
+}
+blockquote cite:before {
+    content: '\2014 \00A0';
+}
+
+blockquote p {
+    color: #666;
+    max-width: 460px;
+}
+hr {
+    width: 100%;
+    margin: 0 auto 0 0;
+    color: #999;
+}
+
+
+
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
@@ -111,6 +192,8 @@ nav ul li, footer ul li {
     display: inline;
     margin-right: 20px;
 }
+
+
 a {
     text-decoration: none;
     color: #999;
@@ -118,15 +201,8 @@ a {
 a:hover {
     text-decoration: underline;
 }
-h1 {
-    font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-}
-p {
-    font-size: 1.5em;
-    line-height: 1.4em;
-    color: #333;
-}
+
+
 footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
