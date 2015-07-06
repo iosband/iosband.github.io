@@ -25,12 +25,17 @@ a = 5
 print(a)
 ~~~
 
-### Sub sub title
+This is **bold**, this is *italics*.
 
-Do equations work though?
-Inline
-$$ A = \int_{x=0}^T f(x) dx $$
-and also distinguished
-\[\mathbb{E} \left[ \mathcal{X} | \mathcal{F}_t \right] \]
+## Using Mathjax
+
+I want to see if equations work properly...
+
+Inline like this,
+$$ I_1 = \int_{x=0}^1 f(x) dx$$
+but also central display
+
+$$\mathbb{E} \left[ \mathcal{X} | \mathcal{F}_t \right]
+  = \sum_{i=1}^\infty \gamma^i = \frac{1}{1 - \gamma}$$
 
 If so, then it looks like this is pretty good.
