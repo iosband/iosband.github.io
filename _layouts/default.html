@@ -1,33 +1,64 @@
 <!DOCTYPE html>
-	<html>
-		<head>
+    <html>
+        <head>
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-		</head>
-		<body>
-			<nav>
-	    		<ul>
-	        		<li><a href="/">Home</a></li>
-		        	<li><a href="/about">About</a></li>
-	        		<li><a href="/cv/IanOsband_Academic.pdf">CV</a></li>
-	        		<li><a href="/blog">Blog</a></li>
-	    		</ul>
-			</nav>
-			<div class="container">
+            <title>{{ page.title }}</title>
+            <!-- link to main stylesheet -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/skel.min.js"></script>
+        <script src="js/skel-layers.min.js"></script>
+        <script src="js/init.js"></script>
+            <link rel="stylesheet" type="text/css" href="/css/skel.css" />
+            <link rel="stylesheet" type="text/css" href="/css/style.css" />
+            <!-- <link rel="stylesheet" type="text/css" href="/css/style-xlarge.css"> -->
+        </head>
+        <body>
 
-			{{ content }}
+        <header id="header" class="alt">
+            <nav id="nav">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/blog.html">Blog</a></li>
+                    <li><a href="/docs/IanOsband_Academic.pdf">CV</a></li>
+                </ul>
+            </nav>
+        </header>
 
-			</div><!-- /.container -->
-			<footer>
-	    		<ul>
-	        		<li><a href="mailto:ian.osband@gmail.com">email</a></li>
-	        		<li><a href="https://github.com/iosband">github.com/iosband</a></li>
-				</ul>
-			</footer>
-		</body>
-	</html>
+        <!-- Banner -->
+            <section id="banner">
+                <h2>Ian Osband</h2>
+                <p>Data, decisions and learning</p>
+            </section>
+
+            <div class="container 75%">
+
+            {{ content }}
+
+            </div><!-- /.container -->
+
+
+<footer id="footer">
+    <div class="container">
+        <ul class="icons">
+            <li><a href="mailto:ian.osband@gmail.com" class="icon fa-mail-reply"></a></li>
+            <li><a href="https://www.facebook.com/ian.osband" class="icon fa-facebook"></a></li>
+            <!-- <li><a href="#" class="icon fa-twitter"></a></li> -->
+            <li><a href="https://instagram.com/ianosband/" class="icon fa-instagram"></a></li>
+            <li><a href="https://github.com/iosband" class="icon fa-github"></a></li>
+            <li><a href="https://bitbucket.org/iosband/" class="icon fa-bitbucket"></a></li>
+            <li><a href="https://plus.google.com/u/0/+IanOsband" class="icon fa-google-plus"></a></li>
+            <li><a href="https://www.linkedin.com/in/iosband" class="icon fa-linkedin"></a></li>
+        </ul>
+        <ul class="copyright">
+            <li>Copywrite &copy; Ian Osband</li>
+            <li> HTML5</li>
+            <li>Design: <a href="http://templated.co">TEMPLATED</a></li>
+        </ul>
+    </div>
+</footer>
+
+        </body>
+    </html>
 
 <script type="text/javascript"
     src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
