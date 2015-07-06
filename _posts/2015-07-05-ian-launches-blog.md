@@ -57,7 +57,7 @@ What *should* you do?
 <img src="http://lexfridman.com/blogs/thoughts/files/2012/12/Confused-Doctor.jpg" alt="Doctor" style="width:800px">
 
 
-Of course, if you know the success rates of both drugs $$p_1, p_2$$ then this problem is trivial, pick the better drug and use that one.
+Of course, if you know the success rates of both drugs $$p_1, p_2$$ then the solution is trivial, pick the better drug and use that one.
 However, in the real world you never *know* the exact probabilities... so what *can* you do?
 Well usually people gather lots of experimental data to estimate the probabilities $$\hat{p}_1, \hat{p}_2$$ and then choose the the one with the higher estimate, all good?
 Not really... here are some problems:
