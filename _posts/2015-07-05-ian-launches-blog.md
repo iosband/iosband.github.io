@@ -24,7 +24,8 @@ I think the answer is yes and it's time for me to join in, here are some reasons
 ## Roadmap
 
 I'm interested in how to make good decisions under uncertainty and I want to write some articles that help make progress in understanding this problem.
-This topic is so insanely broad that nobody really believes me when I say that's what I study... but it's true, or at least that is the goal, what we often study in machine learning makes up only one very small part of that bigger question.
+This topic is so insanely broad that nobody really believes me when I say that's what I study... but it's true, or at least that is the goal.
+What we usually study in machine learning makes up only one very small part of that bigger question.
 In this blog, I hope to outline some of the interesting research topics that I have been involved in.
 
 In particular, I intend to discuss some elements of the [reinforcement learning](http://webdocs.cs.ualberta.ca/~sutton/book/the-book.html) problem, which has received far less attention than other more traditional machine learning topics such as classification or regression.
