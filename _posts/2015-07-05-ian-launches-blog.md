@@ -31,7 +31,6 @@ Do equations work though?
 Inline
 $$ A = \int_{x=0}^T f(x) dx $$
 and also distinguished
-
-$$ \mathbb{E} \left[ \mathcal{X} | \mathcal{F}_t \right] $$
+\[\mathbb{E} \left[ \mathcal{X} | \mathcal{F}_t \right] \]
 
 If so, then it looks like this is pretty good.
