@@ -20,10 +20,10 @@ What about if I need to quote someone:
 
 Or insert a block of code:
 
-```
+~~~
 a = 5
 print(a)
-```
+~~~
 
 ### Sub sub title
 
