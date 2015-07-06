@@ -39,3 +39,12 @@ $$\mathbb{E} \left[ \mathcal{X} | \mathcal{F}_t \right]
   = \sum_{i=1}^\infty \gamma^i = \frac{1}{1 - \gamma}$$
 
 If so, then it looks like this is pretty good.
+
+## The milk saga
+
+Wallace is a cunt, he doesn't understand how much better this is.
+He once told me:
+
+> Oy, did you drink a lilt? If so you owe me 100 pounds!
+
+
