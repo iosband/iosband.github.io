@@ -30,12 +30,13 @@ In this blog, I hope to outline some of the interesting research topics that I h
 In particular, I intend to discuss some elements of the [reinforcement learning](http://webdocs.cs.ualberta.ca/~sutton/book/the-book.html) problem, which has received far less attention than other more traditional machine learning topics such as classification or regression.
 In fact, in its most general form reinforcement learning (RL) contains classification, regression and all supervised learning as a special case... so if we can solve RL then we don't need to worry about anything else!
 
+<img src="http://truedemocracyparty.net/wp-content/uploads/IROBOT2.jpg" alt="iRobot" style="width:800px">
+
 Of course I'm joking here, many problems really don't call for the reinforcement learning... but a lot of the important ones do.
 Most statistical or machine learning methods were developed in a time where data and decisions were done separately.
 Nowadays, many systems are being deployed that are completely automated so that the data they gather determines the decisions they will make.
 However, it is also true that **the decisions they make will influence the data they get**... once this happens everything changes.
 If you want to make a learner that influences its system, you're going to need reinforcement learning.
-I'll give a simple example of this below.
 
 
 ## Exploration vs Exploitation
@@ -51,6 +52,9 @@ Imagine you're a doctor, a data-driven doctor of course, and your goal is to sav
 For simplicity sake we'll start with the setting where all cancer is the same, all people are the same and there are only two drugs available.
 We will also assume that once someone is diagnosed they will certainly die that same day without any drugs, if you give them drug 1 they will be cured with probability $$p_1$$ and if you use drug 2 they will be cured with probability $$p_2$$.
 What *should* you do?
+
+<img src="http://lexfridman.com/blogs/thoughts/files/2012/12/Confused-Doctor.jpg" alt="Doctor" style="width:800px">
+
 
 Of course, if you know the success rates of both drugs $$p_1, p_2$$ then this problem is trivial, pick the better drug and use that one.
 However, in the real world you never *know* the exact probabilities... so what *can* you do?
