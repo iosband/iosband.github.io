@@ -91,7 +91,7 @@ If we want to guarantee "good" performance for a learning algorithm, we'll need 
 ### Regret, or how much better things could have been.
 
 It's not possible to guarantee that a learning algorithm will generally attain good rewards on any bandit problem.
-Some functions $f^*$ just have maxima which aren't very high.
+Some functions $ f^* $ just have maxima which aren't very high.
 However, we might reasonably hope that our learning algorithm can get *close* to the best possible performance *for that problem*.
 
 We formalize this notion in terms of the **regret** or, how much better *could* we have done if we had known the true function $f^*$ from the start.
