@@ -80,14 +80,17 @@ Although the multi-armed bandit (or Bayesian optimization) as stated above is a 
 
 In short, this means that the unknown function $ f^* $ we are trying to optimize stays constant through time and is not influenced by our previous attempts to optimize it.
 In other words, even though we don't assume we know the probability of payout of each arm, **we do assume there is a fixed probability of success independent of our choices**.
-In many practical settings this is a *huge* oversimplication...
-my own research actually focuses on settings which remove this assumption, something which is called [reinforcement learning](https://en.wikipedia.org/wiki/Reinforcement_learning).
-I'll follow up on this problem in a future blog post, but for now let's just keep things simple and assume the Markov assumption is a reasonable approximation to the truth.
+In many practical settings this is a *huge* oversimplication... if you're a doctor treating a patient and you give them a treatment that kills them, then they'll pretty much stay dead no matter what you try!
+
+My own research actually focuses on settings like this, where this may be some long term consequences for your actions.
+This field is called [reinforcement learning](https://en.wikipedia.org/wiki/Reinforcement_learning) and it's really cool.
+I'm definitely intending to follow up on this extension in a future blog post, but before we do that it really helps to understand some of the issues in the bandit setting.
+So, for now let's just keep things simple and assume the Markov assumption is a reasonable approximation to the truth... and for many examples it is!
 
 
 ### Some notation
 
-Before we dive in we'll need just a little bit more notation:
+The last thing before we dive in we'll need just a little bit more notation:
 
 - We'll write $H_t$ for the information seen up to time $t$, technically this should be a [filtration](https://en.wikipedia.org/wiki/Filtration_(mathematics)).
 - A learning algorithm $\pi$ is a function which maps data $H_t$ to distributions over actions $\mathcal{X}$.
