@@ -8,10 +8,11 @@ date: 2015-07-19
 In my [last post](http://iosband.github.io/2015/07/05/ian-launches-blog.html) I introduced the problem of *exploration vs exploitation*.
 In particular, we used the example of a doctor trying to save lives using some medical procedures.
 For each patient the doctor can either try out a new drug in order to gather more data (exploration) or she can use the drug which seems to be the best given the data she already has (exploitation).
-This sort of tradeoff is not just is often referred to in the academic literature as a [multi-armed bandit](https://en.wikipedia.org/wiki/Multi-armed_bandit) problem.
+This sort of tradeoff is not just about casinos, but it shows up in a lot of places.
+In the academic literature this is often referred to as a [multi-armed bandit](https://en.wikipedia.org/wiki/Multi-armed_bandit) problem.
 This week I'm going to to define the problem more concretely and try to give some insight into how we to tackle this effectively.
 
-`Note:` This was my first proper blog post and the length/mathematics has definitely gotten out of hand.
+**Note:** This was my first proper blog post and the length/mathematics has definitely gotten out of hand.
 I'll be following up this post with some code and fun demos within a month, which should make this more interesting!
 If you find something weird, post your questions to the forum at the bottom and I'll do my best to sort it out asap.
 Cheers.
