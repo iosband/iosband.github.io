@@ -74,7 +74,15 @@ Sometimes this formulation is known as [Bayesian optimization](https://en.wikipe
 One example that's had a lot of attention in the literature is where actions parameterized by $d$ real numbers $\mathcal{X} = \mathbb{R}^d$ and the unknown funciton is linear $ f^* (x) = x^T \theta^* $.
 Another common model is that the unknown function $ f^* $ is drawn from some [Gaussian process](http://www.gaussianprocess.org/), which provides a flexible model for nonparametric estimation.
 
+### The Markov assumption
 
+Although the multi-armed bandit (or Bayesian optimization) as stated above is a very flexible tool for solving sequential decision problems, it does rely very heavily on the so-called [Markov assumption](https://en.wikipedia.org/wiki/Markov_property).
+
+In short, this means that the unknown function $ f^* $ we are trying to optimize stays constant through time and is not influenced by our previous attempts to optimize it.
+In other words, even though we don't assume we know the probability of payout of each arm, **we do assume there is a fixed probability of success independent of our choices**.
+In many practical settings this is a *huge* oversimplication...
+my own research actually focuses on settings which remove this assumption, something which is called [reinforcement learning](https://en.wikipedia.org/wiki/Reinforcement_learning).
+I'll follow up on this problem in a future blog post, but for now let's just keep things simple and assume the Markov assumption is a reasonable approximation to the truth.
 
 
 ### Some notation
