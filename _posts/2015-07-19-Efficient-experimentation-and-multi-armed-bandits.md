@@ -379,7 +379,7 @@ Even if you have the most awesome deep neural network architecture imagineable, 
 This isn't a case of fiddling with $\epsilon$ or the learning rate, it's a fundamental problem in decision making.
 
 - **If you want to make good decisions from data, you need good data.**
-- **If the decisions you take affect the data you get, you need to choose the right actions to get good data.**
+- **If the decisions you take affect the data you get, you need to choose your actions to get good data.**
 
 This is the reason that exploration and *reinforcement learning* are so important, they're not just a simple extension of results from supervised learning, but something fundamentally more challenging.
 
