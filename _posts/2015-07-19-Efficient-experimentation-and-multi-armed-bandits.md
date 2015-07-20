@@ -397,7 +397,7 @@ This is the reason that exploration and *reinforcement learning* are so importan
 In my next post I'm planning some fun demos (with accompanying code) so you can try these things out for yourself!
 Also, I'll hope to show more clearly the cases where [Thompson sampling](https://en.wikipedia.org/wiki/Thompson_sampling) outperforms naive methods like $\epsilon$-greedy but also some examples where it is falls way short of the Bayes-optimal solution.
 Actually, I was planning on doing that this time around, but made the classic mistake of writing too much on your first post...
-This has already become something of a monster with far too much boring maths.
+This has already become something of a monster.
 If you have any questions/comments hit me up below and we can go from there.
 See you later.
 
