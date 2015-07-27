@@ -34,7 +34,7 @@ You see a "one-armed bandit" is an old name for a slot machine in a casino, beca
 The *multi*-armed bandit problem involves a stylized casino with $K$ one-armed bandit slot machines:
 
 - Each arm $i$ pays out 1 dollar with probability $p_i$ if it is played; otherwise it pays out nothing.
-- While the $p_1,...,p_k$$ are fixed, we don't know any of their values. 
+- While the $p_1,...,p_k$$ are fixed, we don't know any of their values.
 - Each timestep $t$ we pick a single arm $a_t to play.
 - Based on our choice, we receive a return of $r_t \sim Ber(p_{a_t})$.
 - **How should we choose arms so as to maximize total expected return?**
@@ -343,7 +343,7 @@ Now why is Thompson sampling such a good algorithm for bandit problems:
 
 The most surprising of these observations is point (6).
 People had tried Thompson sampling because it was easy and seemed to work well...
-Yet only in the last few years have people started to understand *why* it works and to work out **guarantees**.
+Yet only in the last few years have people started to understand *why* it works and to work out **guarantees for learning**.
 
 The key observation is that, conditional on any data $H_t,$ the true function $ f^* $ and the *imagined* function $ f_t $ are drawn from exactly the same distribution.
 This means that:
@@ -393,7 +393,7 @@ This isn't a case of fiddling with $\epsilon$ or the learning rate, it's a funda
 - **When your decisions affect the data you get, you need to choose your actions to get good data.**
 
 That's why exploration and *reinforcement learning* are so important.
-They are not simple extensions of supervised learning but they pose fundamentally new challenges.
+They are not simple extensions of supervised learning; they pose fundamentally new challenges.
 
 In my next post I'm planning some fun demos (with accompanying code) so you can try these things out for yourself!
 Also, I'll hope to show more clearly the cases where [Thompson sampling](https://en.wikipedia.org/wiki/Thompson_sampling) outperforms naive methods like $\epsilon$-greedy but also some examples where it is falls way short of the Bayes-optimal solution.
