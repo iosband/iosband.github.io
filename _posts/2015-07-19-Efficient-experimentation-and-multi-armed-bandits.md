@@ -47,13 +47,11 @@ The key point to this problem is that when you first enter the casino *you do no
 
 ### Bandits with generalization
 
-The classic casino "slot-machine" example is particularly simple because we know that each slot machine either returns one or zero with *independent* outcomes.
-If we want to learn about the casino then at the very least we will need to try every arm once since
-*sampling one arm doesn't tell us anything about any other arm*.
-
-However, this also severely limits the practical use of such algorithms.
-Imagine if your doctor had to re-learn basic anatomy for every single patient they encountered... nobody would survive!
-Even though every individual is distinct (and may benefit from personalized care) it is crucial that we can share information across similar patients.
+In the classic formulation, each slot machine is *independent* of every other.
+Since sampling one arm tells us nothing about any other arm, we will need to try every arm at least once.
+This severely limits the practical use of such algorithms.
+Imagine doctors had to re-learn basic anatomy for every single patient they encountered... nobody would survive!
+Even though every individual is distinct (and may benefit from personalized care), it is crucial to share information across similar patients.
 
 >For efficient learning on large problems we need to generalize between similar experiences.
 
@@ -63,6 +61,7 @@ Even though every individual is distinct (and may benefit from personalized care
 
 
 Fortunately, we can enrich our multi-armed bandit model to allow for this type of shared information.
+We can also relax the assumption of binary payoffs.
 Once we do this we consider a general method for "learning to optimize" an unknown function $f^*$.
 This is when the multi-armed bandit starts to get interesting:
 
@@ -91,7 +90,7 @@ So, for now let's just keep things simple and assume the Markov assumption is a 
 
 ### Some notation
 
-The last thing before we dive in we'll need just a little bit more notation:
+The last thing we need before diving in is a bit more notation:
 
 - We'll write $H_t$ for the information seen up to time $t$, technically this should be a [filtration](https://en.wikipedia.org/wiki/Filtration_(mathematics)).
 - A learning algorithm $\pi$ is a function which maps data $H_t$ to distributions over actions $\mathcal{X}$.
@@ -175,8 +174,8 @@ If you want to make good decisions for life, you need to take actions that will 
 
 Being greedy didn't work because sometimes we could become prematurely fixated on a particular arm and then never realize our mistake because we didn't try any other options.
 We can get around this problem by a very simple alteration.
-We'll keep the exact same algorithm as before except at every timestep with some samll probability $\epsilon$ (think 5%) we'll pick an arm completely at random.
-This will ensure that we get to see some other spread of data
+We'll keep the exact same algorithm as before except at every timestep with some small probability $\epsilon$ (think 5%) we'll pick an arm completely at random.
+This will ensure that we see a broader spread of data.s
 
 **For each timestep $t$**:
 
@@ -282,7 +281,7 @@ However, pretty quickly you should concentrate on only the best arms.
 
 The general strategy for dozens of papers on modified UCB-style algorithms is to find new function classes $ \mathcal{F} $ and design some efficient optimistic strategy that has good regret bounds.
 To show the regret bound, you consider the regret at any one step.
-The hard part about this proof is that you never actually *know* what the optimal $ f^*( x^*) $ is... if you did it wouldn't be a bandit problem.
+The hard part about this proof is that you never actually *know* what the optimal $ f^* ( x^* ) $ is... if you did it wouldn't be a bandit problem.
 However, the optimism allows you to bound this difference by the different to your *imagined* optimistic optimum, which must be at least as large since $f^* \in \mathcal{F}_t$.
 
 $$ f^*(x^*) - f^*(x_t) = \underbrace{\max_{x_t \in \mathcal{X}, f \in \mathcal{F}_t} f(x_t) - f^*(x_t)}_{\text{Concentrates with data}} + \underbrace{f^*(x^*) - \max_{x_t \in \mathcal{X}, f \in \mathcal{F}_t} f(x_t)}_{\le 0 \text{ by optimism}} $$
@@ -343,20 +342,21 @@ Now why is Thompson sampling such a good algorithm for bandit problems:
 5. It applies naturally to systems with generalization.
 6. It shares many of the *analytical guarantees* of the best possible optimistic algorithm!
 
-I think the most surprising out of these observations is point (6), which has only been realised in the last few years.
-People had tried Thompson sampling because it was easy and seemed to work well... but now we're starting to understand *why* it works and also provide some really solid **guarantees**.
+The most surprising of these observations is point (6).
+People had tried Thompson sampling because it was easy and seemed to work well...
+Yet only in the last few years have people started to understand *why* it works and to work out **guarantees**.
 
-To see why this is the case, the key observation is that conditional on any data $H_t$ the true function $ f^* $ and the *imagined* function $ f_t $ are drawn from exactly the same distribution.
+The key observation is that, conditional on any data $H_t,$ the true function $ f^* $ and the *imagined* function $ f_t $ are drawn from exactly the same distribution.
 This means that:
 
 $$ \mathbb{E}[ f^*(x^*)] = \mathbb{E} \left[ \mathbb{E}[ f^*(x^*) | H_t] \right]=
    \mathbb{E} \left[ \mathbb{E}[ f_t(x_t) | H_t ] \right] = \mathbb{E}[ f_t(x_t)] $$
 
-This relationship allows us to convert a statement about an unknown optimal reward of an action we'll never know into a standard estimation problem at the action we do actually choose $ f_t(x_t) $.
+This relationship allows us to convert a statement about an unknown optimal reward of an action we'll never know into a standard estimation problem at the action we choose $ f_t(x_t) $.
 
 $$ f^*(x^*) - f^*(x_t) = \underbrace{f_t(x_t) - f^*(x_t)}_{\text{Concentrates with data}} + \underbrace{f^*(x^*) - f(x_t)}_{\mathbb{E} = 0 \text{ by construction}} $$
 
-Following through exactly the same type of analysis as for the UCB-style we recover the same regret bounds for independent $K$-armed bandit:
+Following through the same type of analysis as for UCB we recover the same regret bounds for independent $K$-armed bandits:
 
 $$ {\rm Regret}(T, \pi) = O(\sqrt{KT}) $$
 
@@ -364,9 +364,9 @@ And in $d$-dimensional linear bandits:
 
 $$ {\rm Regret}(T, \pi) = O(d\sqrt{T}) $$
 
-The cool thing here is that we've been able to deal with things at a higher level of abstraction when compared to the optimistic algorithm.
-This means that our proofs will go through for *any* type of prior structure.
-These results above are actually just special cases that for *any* type of function class $ f^* \in \mathcal{F} $ we can get an elegant regret analysis in terms of the **dimension of the function class** $ {\rm dim}(\mathcal{F}) $.
+The cool thing here is that we can analyze probability matching at a much higher level of abstraction than we can analyze the optimistic algorithm.
+Our proofs work for *any* type of prior structure; the results above are just special cases.
+Indeed, for *any* function class $ f^* \in \mathcal{F} $ we obtain an elegant regret analysis in terms of its **dimension** $ {\rm dim}(\mathcal{F}) $:
 
 
 $$ {\rm Regret}(T, \pi) = O(\sqrt{ {\rm dim} (\mathcal{F}) T}) $$
@@ -377,8 +377,8 @@ This result and several others is proven in the great paper by my friend [Dan Ru
 
 - [Learning to optimize via posterior sampling](http://web.stanford.edu/~djrusso/docs/Learning_to_Optimize.pdf)
 
-If you've taken the time to read this far I can really recommend going through the paper, which covers a lot of the material in this post but in a more precise way.
-I've already gone into way more maths/proof than I was hoping to cover...
+It covers a lot of the material in this post but in a more precise way.
+I highly recommend it.
 
 ## Time to wrap it up!
 
@@ -391,9 +391,10 @@ Even if you have the most awesome deep neural network architecture imagineable, 
 This isn't a case of fiddling with $\epsilon$ or the learning rate, it's a fundamental problem in decision making.
 
 - **If you want to make good decisions from data, you need good data.**
-- **If the decisions you take affect the data you get, you need to choose your actions to get good data.**
+- **When your decisions affect the data you get, you need to choose your actions to get good data.**
 
-This is the reason that exploration and *reinforcement learning* are so important, they're not just a simple extension of results from supervised learning, but something fundamentally more challenging.
+That's why exploration and *reinforcement learning* are so important.
+They are not simple extensions of supervised learning but they pose fundamentally new challenges.
 
 In my next post I'm planning some fun demos (with accompanying code) so you can try these things out for yourself!
 Also, I'll hope to show more clearly the cases where [Thompson sampling](https://en.wikipedia.org/wiki/Thompson_sampling) outperforms naive methods like $\epsilon$-greedy but also some examples where it is falls way short of the Bayes-optimal solution.
