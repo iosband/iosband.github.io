@@ -622,16 +622,28 @@ function clicked(choice) {
 ## Results
 
 Hopefully you'll have a play around with the simulation above and get a bit of a feel for the performance of these algorithms.
+Here are my first takeaways:
+
+- Human intuition isn't bad on the small problems (drugs and/or patients).
+- Being greedy really sucks.
+-
 I was quite surprised how well I could often do just on my intuition when the number of drugs and/or patients were small.
 Generally epsilon-greedy (here I set $\epsilon = 0.1$) and posterior sampling seem to perform best on simple problems.
 
 **Once you get into the big problems though, you'll start to see the benefits of efficient experimentation**.
 Try setting the number of patients to 10,000 and you'll see that both of the greedy strategies will have regret that grows *linearly* in time.
-The bandit algorithms UCB and posterior sampling on the other hand have regret that grows much more slowly.
-Over the long run this makes a huge difference.
+The bandit algorithms UCB and posterior sampling on the other hand are guaranteed to converge on the optimal policy.
 
-Overall, it's pretty clear that posterior sampling is consistently one of the best (if not the best) algorithms in this Bieber fever bandit problem.
-If you're interested in learning more about this I can recommend the paper "[An emprical evaluation of Thompson sampling](http://www.research.rutgers.edu/~lihong/pub/Chapelle12Empirical.pdf)" that really kicked off the recent revival in Thompson sampling research.
+Whatever way you slice it, posterior sampling is consistently one of the best (if not the best) algorithms in this Bieber fever bandit problem.
+Isn't it nice when the experiment follows the theory?
+
+<center>
+<img src="http://i.huffpost.com/gen/1632851/images/o-DOCTOR-THUMBS-UP-facebook.jpg" alt="doctor" style="height:250px">
+</center>
+
+
+
+Now, if you're interested in learning more about this I can recommend the paper "[An emprical evaluation of Thompson sampling](http://www.research.rutgers.edu/~lihong/pub/Chapelle12Empirical.pdf)" that really kicked off the recent revival in Thompson sampling research.
 
 Just a few more things before I check out on this post.
 
