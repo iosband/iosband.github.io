@@ -12,10 +12,8 @@ This sort of tradeoff is not just about casinos, but it shows up in a lot of pla
 In the academic literature this is often referred to as a [multi-armed bandit](https://en.wikipedia.org/wiki/Multi-armed_bandit) problem.
 This week I'm going to to define the problem more concretely and try to give some insight into how we to tackle this effectively.
 
-**Note:** This was my first proper blog post and the length/mathematics has definitely gotten out of hand.
-I'll be following up this post with some code and fun demos within a month, which should make this more interesting!
-If you find something weird, post your questions to the forum at the bottom and I'll do my best to sort it out asap.
-Cheers.
+**Update:** In my [new post](http://iosband.github.io/2015/07/30/Beat-the-bandit.html) you can now experiment with some of these algorithms and try to beat them yourself.
+Check it out!
 
 ## Multi-armed bandit
 
