@@ -29,21 +29,20 @@ What is a multi-armed bandit? Well... here are a few types:
 </div>
 </center>
 
-Actually, it's the third photo and the goofy looking octopus that I'm talking about.
-You see a "one-armed bandit" is an old name for a slot machine that you'd find in a casino, because it has one arm and it steals your money... laugh track please!
-The *multi*-armed bandit problem now comes from a sylized problem of a casino which has many slot machines or one-armed bandits:
+Actually, it's only the third photo and the goofy looking octopus that I'm talking about.
+You see a "one-armed bandit" is an old name for a slot machine in a casino, because it has one arm and it steals your money... laugh track please!
+The *multi*-armed bandit problem involves a stylized casino with $K$ one-armed bandit slot machines:
 
-- You enter a casino which has $1,..,K$ distinct slot machines (arms).
-- Each arm $i$ pays out 1 dollar with probability $p_i$ if it is played, otherwise it pays out nothing.
-- Every timestep $t$ you have to pick a single arm $a_t \in \{1, .., K\}$ to play.
-- Based on your choice, you receive a return of $r_t \sim Ber(p_{a_t})$.
-- **How should you choose arms so as to maximize your total expected return?**
+- Each arm $i$ pays out 1 dollar with probability $p_i$ if it is played; otherwise it pays out nothing.
+- While the $p_1,...,p_k$$ are fixed, we don't know any of their values. 
+- Each timestep $t$ we pick a single arm $a_t to play.
+- Based on our choice, we receive a return of $r_t \sim Ber(p_{a_t})$.
+- **How should we choose arms so as to maximize total expected return?**
 
-Now clearly this is a bit of a silly example and in the real world slot machines are a terrible way to make money.
-The point of this example is to highlight the very simple tradeoff between *exploration and exploitation*.
-At each timestep there's a tradeoff between trying an arm which appears to give high rewards (exploitation) and trying out an arm which you haven't seen many times in the hope of learning more (exploration).
-If we can understand how to solve this toy problem then hopefully we will gain some insights we can pass on to settings which we actually care about... like medical testing, advertising, robotics.
-The key point to this problem is that when you first enter the casino *you do not know the payour rates of each machine*.
+Clearly this is a silly example. Playing slot machines is a terrible way to make money.
+The point is to highlight the simple tradeoff between *exploration and exploitation*.
+At each timestep, inferring from past experience, we choose between the arm that seems to offer the highest expected rewards (exploitation) and an arm we want more data about in hopes it might be better (exploration).
+If we can understand how to solve this toy problem, hopefully we will gain insights into settings we actually care about, like medical testing, advertising, and robotics.
 
 ### Bandits with generalization
 
