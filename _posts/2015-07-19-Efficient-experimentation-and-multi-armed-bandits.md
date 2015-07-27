@@ -34,8 +34,8 @@ You see a "one-armed bandit" is an old name for a slot machine in a casino, beca
 The *multi*-armed bandit problem involves a stylized casino with $K$ one-armed bandit slot machines:
 
 - Each arm $i$ pays out 1 dollar with probability $p_i$ if it is played; otherwise it pays out nothing.
-- While the $p_1,...,p_k$$ are fixed, we don't know any of their values.
-- Each timestep $t$ we pick a single arm $a_t to play.
+- While the $p_1,...,p_k$ are fixed, we don't know any of their values.
+- Each timestep $t$ we pick a single arm $a_t$ to play.
 - Based on our choice, we receive a return of $r_t \sim Ber(p_{a_t})$.
 - **How should we choose arms so as to maximize total expected return?**
 
