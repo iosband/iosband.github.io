@@ -631,11 +631,8 @@ The bandit algorithms UCB and posterior sampling on the other hand have regret t
 Over the long run this makes a huge difference.
 
 Overall, it's pretty clear that posterior sampling is consistently one of the best (if not the best) algorithms in this Bieber fever bandit problem.
-If you're interested in learning more about this I can recommend the paper:
+If you're interested in learning more about this I can recommend the paper "[An emprical evaluation of Thompson sampling](http://www.research.rutgers.edu/~lihong/pub/Chapelle12Empirical.pdf)" that really kicked off the recent revival in Thompson sampling research.
 
-- [An emprical evaluation of Thompson sampling](http://www.research.rutgers.edu/~lihong/pub/Chapelle12Empirical.pdf)
-
-that really kicked off the recent revival in Thompson sampling research.
 Just a few more things before I check out on this post.
 
 1. This simulation is a multi-armed bandit **with independent arms**.
