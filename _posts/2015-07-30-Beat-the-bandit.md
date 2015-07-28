@@ -629,9 +629,9 @@ Hopefully you'll have a play around with the simulation above and get a bit of a
 Here are my first takeaways:
 
 - **Being greedy really sucks.**
-- Human intuition and $epsilon$-greedy (here $epsilon = 0.1$) aren't bad on the small problems (drugs and/or patients).
-- **Once you get into the large-scale problems you start to see the benefits of efficient experimentation**.
-- Posterior sampling is consistently one of the best algorithms in simulation.
+- Human intuition and $\epsilon$-greedy (here $\epsilon = 0.1$) aren't bad on the small problems (drugs and/or patients).
+- Once you get into the large-scale problems you start to see the benefits of efficient experimentation.
+- **Posterior sampling is consistently one of the best algorithms**.
 
 Isn't it nice when the experiment matches the theory?
 
