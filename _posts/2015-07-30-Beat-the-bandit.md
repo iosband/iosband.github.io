@@ -73,14 +73,14 @@ At the end (or whenever you press **Plot**) you will be able to see the true suc
         <input type="range" name="arm_form" min="0" max="50" value="4" oninput="this.form.arm_input.value=this.value" id="drugs_slider" />
         <input type="number" name="arm_input" min="0" max="50" value="4" oninput="this.form.arm_range.value=this.value" />
     </form>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Patients:</strong>
+    &nbsp;&nbsp;&nbsp;&nbsp; <strong>Patients:</strong>
     <form>
         <input type="range" name="step_form" min="0" max="10000" value="40" oninput="this.form.step_input.value=this.value" id="patients_slider"/>
         <input type="number" name="step_input" min="0" max="10000" value="40" oninput="this.form.step_form.value=this.value" />
     </form>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
     <button type="button" class="button" onclick="gen_bandit_problem($('#drugs_slider').val())">Play</button>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
     <button type="button" class="button" onclick="gen_plot()">Plot</button>
 </div>
 
@@ -511,7 +511,6 @@ function gen_plot() {
     var ucb_plt = convert_cumsum(ucb_rewards)
     var egreedy_plt = convert_cumsum(egreedy_rewards)
     var greedy_plt = convert_cumsum(greedy_rewards)
-    console.log(user_rewards[0])
     if (user_rewards.length > 1) {
         var user_plt = convert_cumsum(user_rewards)
     } else {
@@ -539,10 +538,11 @@ function gen_plot() {
     var ucb_plt = convert_regret(ucb_rewards)
     var egreedy_plt = convert_regret(egreedy_rewards)
     var greedy_plt = convert_regret(greedy_rewards)
-
-    console.log(user_rewards)
-    var user_plt = convert_regret(user_rewards)
-    console.log(user_plt)
+    if (user_rewards.length > 1) {
+        var user_plt = convert_regret(user_rewards)
+    } else {
+        user_plt = [[1, 0]]
+    }
 
     // Plot the regret
     data = [{ data:ps_plt, label:"Posterior sampling", lines:{show:true}},
@@ -557,6 +557,9 @@ function gen_plot() {
 
 
 function clicked(choice) {
+    // Update the simulation of the experiment based on the click
+    user_t += 1
+
     // When the arm is clicked a choice is given.
     reward = pull_arm(p_true, choice)
     if (reward == 1) {
@@ -565,25 +568,25 @@ function clicked(choice) {
         outcome = 'Die'
     }
 
-    if (user_t === 0) {
+    // Update the user responses
+    if (user_t == 1) {
         user_rewards = []
         user_rewards.push([reward, choice]);
     } else {
-        user_rewards.push([reward + user_rewards[user_t - 1][0], choice]);
+        user_rewards.push([reward + user_rewards[user_t - 2][0], choice]);
     }
-    console.log(user_rewards[user_t])
 
+    // Output to screen
     var extra_output = ''
     if (user_t == t_steps) {
         extra_output = ('Trial complete, please see plot below or start again. <br/>')
         gen_plot()
     } else if (user_t < t_steps) {
-        extra_output = ('Timestep: ' + (user_t + 1) +
+        extra_output = ('Timestep: ' + (user_t) +
                         ', Drug: ' + (choice + 1) +
                         ', Patient: ' + outcome + '<br/>')
     }
     user_str = extra_output + user_str
-    user_t += 1
     $("#click_output").html(user_str);
 }
 
