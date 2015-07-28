@@ -323,8 +323,7 @@ function greedy_choice(arm_counts) {
             n_pull = 1
         }
         var p_hat = arm_counts[i][0] / n_pull
-        var w = (Math.random() - 0.5) * 0.0001
-        if (p_hat + w > p_max) {
+        if (p_hat > p_max) {
             p_max = p_hat
             choice = i
         }
@@ -652,7 +651,7 @@ The only really interesting part of the code is how the different bandit algorit
 Hopefully this should look exactly like the descriptions in my [last post](http://iosband.github.io/2015/07/19/Efficient-experimentation-and-multi-armed-bandits.html).
 
 ### Algorithm 1: Greedy
-~~~~
+~~~~ js
 function greedy_choice(arm_counts) {
     // greedy_choice uses the greedy empirical estimate to choose an arm.
     //
@@ -669,8 +668,7 @@ function greedy_choice(arm_counts) {
             n_pull = 1
         }
         var p_hat = arm_counts[i][0] / n_pull
-        var w = (Math.random() - 0.5) * 0.0001
-        if (p_hat + w > p_max) {
+        if (p_hat > p_max) {
             p_max = p_hat
             choice = i
         }
@@ -678,6 +676,7 @@ function greedy_choice(arm_counts) {
     return choice
 }
 ~~~~
+
 
 ### Algorithm 2: Epsilon-Greedy
 
