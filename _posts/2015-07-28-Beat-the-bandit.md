@@ -71,7 +71,7 @@ At the end (or whenever you press **Plot**) you will be able to see the true suc
     <strong>Drugs:</strong>
     <form>
         <input type="range" name="arm_form" min="0" max="50" value="4" oninput="this.form.arm_input.value=this.value" id="drugs_slider" />
-        <input type="number" name="arm_input" min="0" max="50" value="4" oninput="this.form.arm_range.value=this.value" />
+        <input type="number" name="arm_input" min="0" max="50" value="4" oninput="this.form.arm_form.value=this.value" />
     </form>
     &nbsp;&nbsp;&nbsp;&nbsp; <strong>Patients:</strong>
     <form>
