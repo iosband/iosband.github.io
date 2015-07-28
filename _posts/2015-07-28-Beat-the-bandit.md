@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Can you beat the bandit?
-date: 2015-07-30
+date: 2015-07-28
 ---
 
 [Last time](http://iosband.github.io/2015/07/19/Efficient-experimentation-and-multi-armed-bandits.html) we went through the basic problem known as the "multi-armed bandit".
