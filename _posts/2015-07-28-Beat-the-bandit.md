@@ -323,9 +323,10 @@ function greedy_choice(arm_counts) {
     for (i = 0; i < arm_counts.length; i++) {
         var n_pull = (arm_counts[i][0] + arm_counts[i][1])
         if (n_pull < 0.5) {
-            n_pull = 1
+            var p_hat = 0.5
+        } else {
+            var p_hat = arm_counts[i][0] / n_pull
         }
-        var p_hat = arm_counts[i][0] / n_pull
         if (p_hat > p_max) {
             p_max = p_hat
             choice = i
@@ -631,7 +632,7 @@ function clicked(choice) {
 Hopefully you'll have a play around with the simulation above and get a bit of a feel for the performance of these algorithms.
 Here are my first takeaways:
 
-- **Being greedy really sucks.**
+- **Being greedy really sucks.** Sometimes you get lucky, but usually it just doesn't work.
 - Human intuition and $\epsilon$-greedy (here $\epsilon = 0.1$) aren't bad on the small problems (drugs and/or patients).
 - Once you get into the large-scale problems you start to see the benefits of efficient experimentation.
 - **Posterior sampling is consistently one of the best algorithms**.
@@ -672,9 +673,10 @@ function greedy_choice(arm_counts) {
     for (i = 0; i < arm_counts.length; i++) {
         var n_pull = (arm_counts[i][0] + arm_counts[i][1])
         if (n_pull < 0.5) {
-            n_pull = 1
+            var p_hat = 0.5
+        } else {
+            var p_hat = arm_counts[i][0] / n_pull
         }
-        var p_hat = arm_counts[i][0] / n_pull
         if (p_hat > p_max) {
             p_max = p_hat
             choice = i
