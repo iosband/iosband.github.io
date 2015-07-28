@@ -628,13 +628,12 @@ function clicked(choice) {
 Hopefully you'll have a play around with the simulation above and get a bit of a feel for the performance of these algorithms.
 Here are my first takeaways:
 
-- Human intuition isn't bad on the small problems (drugs and/or patients).
-- Being greedy really sucks.
-- But $\epsilon$-greedy (here $\epsilon = 0.1$) is pretty good for simple problems (small number of drugs and patients).
+- **Being greedy really sucks.**
+- Human intuition and $epsilon$-greedy (here $epsilon = 0.1$) aren't bad on the small problems (drugs and/or patients).
 - **Once you get into the large-scale problems you start to see the benefits of efficient experimentation**.
+- Posterior sampling is consistently one of the best algorithms in simulation.
 
-Whatever way you slice it though, posterior sampling is consistently one of the best of these algorithms in this Bieber fever bandit problem.
-Isn't it nice when the experiment follows the theory?
+Isn't it nice when the experiment matches the theory?
 
 <center>
 <img src="http://i.huffpost.com/gen/1632851/images/o-DOCTOR-THUMBS-UP-facebook.jpg" alt="doctor" style="height:250px">
