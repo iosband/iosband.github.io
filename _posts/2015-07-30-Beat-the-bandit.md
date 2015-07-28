@@ -34,15 +34,18 @@ Unfortunately, nobody knows how well these treatments work.
 Luckily, you recognise this as nothing more than an [independent bernoulli bandit](https://en.wikipedia.org/wiki/Multi-armed_bandit)... no problem!
 
 In the simulation below you'll choose how many drugs you have to choose from *and* how many patients you'll be dealing with.
-Once you press "Play" you'll be able to simulate this sequential experiment problem for yourself.
-At the end (or whenever you press "Plot") you will be able to see the true success probabilities of each drug and compare your performance to that of several basic algorithms:
+Once you press **Play** you'll be able to simulate this sequential experiment problem for yourself.
+At the end (or whenever you press **Plot**) you will be able to see the true success probabilities of each drug and compare your performance to that of several basic algorithms:
 
 - Greedy
 - Epsilon-Greedy
 - UCB
 - Posterior Sampling
 
-**Can you beat the bandit algorithms?**
+<center>
+    <h2> Can you beat the bandit algorithms? </h2>
+</center>
+
 
 
 <div id="wrap">
@@ -65,19 +68,19 @@ At the end (or whenever you press "Plot") you will be able to see the true succe
 }
 </style>
 
-    Drugs:
+    <strong>Drugs:</strong>
     <form>
         <input type="range" name="arm_form" min="0" max="50" value="4" oninput="this.form.arm_input.value=this.value" id="drugs_slider" />
         <input type="number" name="arm_input" min="0" max="50" value="4" oninput="this.form.arm_range.value=this.value" />
     </form>
-    &nbsp; Patients:
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Patients:</strong>
     <form>
         <input type="range" name="step_form" min="0" max="10000" value="40" oninput="this.form.step_input.value=this.value" id="patients_slider"/>
         <input type="number" name="step_input" min="0" max="10000" value="40" oninput="this.form.step_form.value=this.value" />
     </form>
-    &nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <button type="button" class="button" onclick="gen_bandit_problem($('#drugs_slider').val())">Play</button>
-    &nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <button type="button" class="button" onclick="gen_plot()">Plot</button>
 </div>
 
@@ -233,7 +236,7 @@ function init_arms(n_arms) {
     //  p_true - n_arms x 1 - array of success probabilities (unknown to agent)
     var p_true = [];
     for (i = 0; i < n_arms; i++) {
-        p_true.push(rbeta(2, 2));
+        p_true.push(Math.random());
     }
     return p_true;
 }
@@ -473,7 +476,7 @@ function convert_regret(cum_rewards) {
 
 function make_guide() {
     // make_guide creates the helper text for the blank screens
-    $("#click_output").html('Drug trial results will show up here.')
+    $("#click_output").html('Experiment results will show up here once you select a drug to trial.')
     $("#flot_p").html('Press "Plot" to reveal the true drug efficacy.')
     $("#flot_sum").html('Press "Plot" to reveal bandit algorithm performance.')
 }
@@ -596,7 +599,9 @@ function clicked(choice) {
 
 <div id="wrap">
 <h3>Trial results</h3>
-<div style="overflow: auto; height:150px;" id="click_output"></div>
+<div style="overflow: auto; height:150px;" id="click_output">
+    Experiment results will show up here once you select a drug to trial.
+</div>
 </div>
 
 <div id="wrap2">
