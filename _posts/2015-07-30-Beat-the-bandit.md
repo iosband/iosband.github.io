@@ -625,10 +625,10 @@ Here are my first takeaways:
 
 - Human intuition isn't bad on the small problems (drugs and/or patients).
 - Being greedy really sucks.
-- Generally epsilon-greedy (here I set $\epsilon = 0.1$) and posterior sampling seem to perform best on simple problems.
-- **Once you get into the big problems you start to see the benefits of efficient experimentation**. UCB and posterior sampling do best here.
+- But $\epsilon$-greedy (here $\epsilon = 0.1$) is pretty good for simple problems.
+- **Once you get into the big problems you start to see the benefits of efficient experimentation**.
 
-Whatever way you slice it though, posterior sampling is consistently one of the best (if not the best) algorithms in this Bieber fever bandit problem.
+Whatever way you slice it though, posterior sampling is consistently one of the best of these algorithms in this Bieber fever bandit problem.
 Isn't it nice when the experiment follows the theory?
 
 <center>
