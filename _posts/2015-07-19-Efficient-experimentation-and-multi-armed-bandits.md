@@ -21,7 +21,7 @@ What is a multi-armed bandit? Well... here are a few types:
 
 <center>
 <div>
- <img src="http://www.rmtracking.com/blog/wp-content/uploads/2011/11/iStock_000014773673XSmall.jpg" alt="thief" style="height:170px">
+ <img src="http://serptool.com/img/thief.png" alt="thief" style="height:170px">
  <img src="http://epguides.com/Zorro_1957/cast.jpg" alt="zorro" style="height:170px">
  <img src="http://research.microsoft.com/en-us/projects/bandits/MAB-2.jpg" alt="mab" style="height:170px">
 </div>
@@ -125,7 +125,7 @@ You have high regret whenever you look back on your actions and realize you coul
 <div>
  <img src="http://img.humorsharing.com/media/images/1212/i_weird_families_007_50e050e7c7542.jpg" alt="family" style="height:200px">
  <img src="https://s-media-cache-ak0.pinimg.com/236x/7c/55/ab/7c55ab425cf2cd1c264277a8792235d8.jpg" alt="mullet" style="height:200px">
-  <img src="https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/11021099_10203352168477639_168498448054596353_n.jpg?oh=e2e9c5cc3cae9b1cbf6c1b1d88011aa5&oe=5648ABAB&__gda__=1448696212_3640086f4dd495c1a11438b99b32f626" alt="ian" style="height:200px">
+  <img src="http://i.imgur.com/HkEuuoj.jpg" alt="ian" style="height:200px">
  <img src="https://s-media-cache-ak0.pinimg.com/736x/e0/6c/88/e06c880bcbe59e9d1faeca1019858f85.jpg" alt="cats" style="height:200px">
 </div>
 </center>
