@@ -6,7 +6,7 @@
 -->
 <html>
     <head>
-        <title>Ian Osband - Homepage</title>
+        <title>Ian Osband - Research</title>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
@@ -79,193 +79,245 @@
         <header class="major special">
             <h2>Research Focus</h2>
             <p>Statistically and computationally efficient reinforcement learning</p>
-            <!-- <p>Deep Exploration via Randomized Value Functions</p> -->
-            <!-- <br> -->
-            <!-- <p>Efficient Uncertainty in Deep Reinforcement Learning</p> -->
         </header>
     </div>
     <div class="6u$ 12u$(medium)">
-        <p>More information to follow.</p>
-      </div>
-    </div>
-  </div>
+<p>If you want to make good decisions from data, you need good data.
+Traditional statistics and machine learning has made great progress in learning form fixed datasets, but even an <i>optimal</i> learning algorithm for learning from a fixed dataset can be arbitrarily bad when the decisions it makes affect the data it gets.
+I'm trying to design algorithms which can learn to take good actions (and so may affect its environment) in a manner which is simultaneously
+<a href="https://en.wikipedia.org/wiki/Computational_complexity_theory" target="_blank">computationally tractable</a>
+and
+<a href="https://en.wikipedia.org/wiki/Efficiency_(statistics)statistically efficient." target="_blank">statistically efficient</a>.
+</p>
+</div>
+</div>
+</div>
 </section>
 
 
-            <!-- Research -->
-<!--                 <section id="highlights" class="wrapper style2 special">
-                    <div class="container">
-                        <header class="major special">
-                            <h2>Highlights</h2>
-                            <p>Favourite papers + key insights</p>
-                        </header>
-                        <div class="feature-grid">
-              <div class="feature-grid">
-                <div class="feature">
-                  <div class="image rounded">
-                      <a href="https://arxiv.org/abs/1608.02731">
-                          <img src="images/endless-railroad.jpg" alt="" />
-                      </a>
-                  </div>
-                  <div class="content">
-                      <header>
-                          <h4>Posterior Sampling for Reinforcement Learning without Episodes</h4>
-                          <p>Technical note 2016</p>
-                      </header>
-                      <p>The <a href="https://arxiv.org/abs/1406.3926" target="_blank">previously published results</a> for posterior sampling without episodic reset are incorrect. This note clarifies some of the issues in this space.</p>
-                  </div>
-                </div>                <div class="feature">
-                  <div class="image rounded">
-                      <a href="https://arxiv.org/abs/1608.02732">
-                          <img src="images/force_bound.jpg" alt="" />
-                      </a>
-                  </div>
-                  <div class="content">
-                      <header>
-                          <h4>On Lower Bounds for Regret in Reinforcement Learning</h4>
-                          <p>Technical note 2016</p>
-                      </header>
-                      <p>The <a href="http://www.stat.berkeley.edu/~bartlett/papers/bt-rarbarllwcm-09.pdf" target="_blank">previously published proof</a> for the lower bound of any reinforcement learning algorithm are incorrect. This note clarifies some of the issues in this space.</p>
-                  </div>
-                </div>
-              <div class="feature">
-                  <div class="image rounded">
-                      <a href="https://arxiv.org/abs/1607.00215">
-                          <img src="images/rect_conf.png" alt="" />
-                      </a>
-                  </div>
-                  <div class="content">
-                      <header>
-                          <h4>Why is Posterior Sampling Better than Optimism for Reinforcement Learning?</h4>
-                          <p>In submission</p>
-                      </header>
-                      <p>Computational results demonstrate that PSRL dramatically outperforms UCRL2. We provide insight into the extent of this performance boost and the phenomenon that drives it.</p>
-                  </div>
-                </div>
-              <div class="feature">
-                  <div class="image rounded">
-                      <a href="http://arxiv.org/abs/1602.04621">
-                          <img src="images/pacman.jpg" alt="" />
-                      </a>
-                  </div>
-                  <div class="content">
-                      <header>
-                          <h4>Deep Exploration via Bootstrapped Deep Q-Networks</h4>
-                          <p>NIPS 2016</p>
-                      </header>
-                      <p>Deep exploration and deep reinforcement learning. Takes the insight from efficient exploration via randomized value functions and attains state of the art results on Atari. Includes some sweet vids.</p>
-                  </div>
-                </div>
-                <div class="feature">
-                    <div class="image rounded">
-                        <a href="http://xxx.tau.ac.il/abs/1507.00300">
-                            <img src="images/deep.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="content">
-                        <header>
-                            <h4>Bootstrapped Thompson Sampling and Deep Exploration</h4>
-                            <p>Technical pre-print 2015</p>
-                        </header>
-                        <p>A principled approach to efficient exploration with generalization that can be implemented for deep learning models at scale. Use an augmented bootstrap to approximate the posterior distribution.</p>
-                    </div>
-                </div>
-                <div class="feature">
-                    <div class="image rounded">
-                        <a href="http://arxiv.org/abs/1402.0635">
-                        <img src="images/dog.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="content">
-                        <header>
-                            <h4>Generalization and Exploration via Randomized Value functions</h4>
-                            <p>ICML 2016</p>
-                        </header>
-                        <p>You can combine efficient exploration and generalization, all without a model-based planning step. Some cool empirical results and also some theory. My favorite paper.</p>
-                    </div>
-                </div>
-                <div class="feature">
-                    <div class="image rounded">
-                        <a href="http://papers.nips.cc/paper/5245-model-based-reinforcement-learning-and-the-eluder-dimension">
-                        <img src="images/eluder.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="content">
-                        <header>
-                            <h4>Model based reinforcement learning and the eluder dimension</h4>
-                            <p>NIPS 2014</p>
-                        </header>
-                        <p>The first general analysis of model based RL in terms of the dimensionality, rather than the cardinality, of the system. Several new state of the art results including linear systems.</p>
-                    </div>
-                </div>
-              <div class="feature">
-                  <div class="image rounded">
-                      <a href="http://papers.nips.cc/paper/5445-near-optimal-reinforcement-learning-in-factored-mdps">
-                      <img src="images/factored.jpg" alt="" />
-                      </a>
-                  </div>
-                  <div class="content">
-                      <header>
-                          <h4>Near-optimal Reinforcement Learning in Factored MDPs</h4>
-                          <p>NIPS Spotlight 2014, INFORMS 2014</p>
-                      </header>
-                      <p>If the environment is a structured graph (aka factored MDP), then you can exploit that to learn quickly. You can adapt UCB-style approaches for this, posterior sampling gets it for free. </p>
-                  </div>
-              </div>
-              <div class="feature">
-                  <div class="image rounded">
-                      <a href="http://papers.nips.cc/paper/5185-more-efficient-reinforcement-learning-via-posterior-sampling">
-                      <img src="images/dice.jpg" alt="" />
-                      </a>
-                  </div>
-                  <div class="content">
-                      <header>
-                          <h4>(More) Efficient Reinforcement Learning via Posterior Sampling</h4>
-                          <p>NIPS 2013, RLDM 2013</p>
-                      </header>
-                      <p>You don't need to use loose UCB-style algorithms to get regret bounds for reinforcement learning. Posterior sampling is more efficient in terms of computation and data and shares similar gaurantees. </p>
-                  </div>
-              </div>
-                        </div>
-                    </div>
-                </section> -->
 
     <section id="publications" class="wrapper style2">
         <div class="container" style="max-width: 1000px; line-height: 140%;">
 
             <header class="major special">
                 <h2>Publications</h2>
-                <p>All the papers</p>
+                <p>All the links you could want</p>
             </header>
+<br>
 
-        <p>
-        More information to follow.
-        </p>
-       <!--  <p id=""><a href="http://explorecourses.stanford.edu/search;jsessionid=eqe6sam4fpd614wv5fgcsffa2?q=MS%26E+142%3A+Introductory+Financial+Analysis&filter-coursestatus-Active=on&view=catalog&academicYear=20142015" target="_blank"><span class="image left"><img src="images/stocks.jpg" title="" alt="" style="max-width: 140px"></span></a><h4> MS&ampE 145 - Introduction to Financial analysis - lead instructor</h4><p>Finance for engineers aimed for over 75 undergraduate juniors and seniors. Everything from the time value of money to CAPM to elementary option pricing and portfolio optimization. Practical data analysis skills taught through spreadsheets.</p> -->
+<p id="Osband2016PSRLepisodes">
+<a href="https://arxiv.org/abs/1608.02731" target="_blank">
+    <span class="image left">
+        <img src="images/endless-railroad.jpg" title="Posterior Sampling for Reinforcement Learning without Episodes" alt="Posterior Sampling for Reinforcement Learning without Episodes" style="max-width: 220px">
+    </span>
+</a>
+<h4>
+    Posterior Sampling for Reinforcement Learning without Episodes
+     <a href="research.html#Osband2016PSRLepisodes"><span class="image right"><img src="images/link-to-here.png" title="Link to this paper" alt="Link to this paper" style="max-width: 15px"></span></a>
+</h4>
+Some of the <a href="https://arxiv.org/abs/1406.3926" target="_blank">previously published results</a> for posterior sampling without episodic reset are incorrect.
+This note clarifies some of the issues in this space and presents some conjectures towards future solutions.
+<br><br>
+Ian Osband, Benjamin Van Roy<br>
+<i>arXiv technical pre-print 2016</i><br>
+[<a href="https://arxiv.org/abs/1608.02731" target="_blank">Paper</a>]
+</p>
+<br>
+<br>
 
-            <br>
 
-<!--     <p id="Gal2010Overcoming">
-    <a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5708948&tag=1" target="_blank">
-        <span class="image left">
-            <img src="Images/neural_network.jpg" title="Overcoming Alpha-Beta Limitations Using Evolved Artificial Neural Networks" alt="Overcoming Alpha-Beta Limitations Using Evolved Artificial Neural Networks" style="max-width: 120px">
-        </span>
-    </a>
-    <h4>
-        Overcoming Alpha-Beta Limitations Using Evolved Artificial Neural Networks
-         <a href="publications.html#Gal2010Overcoming"><span class="image right"><img src="Images/link-to-here.png" title="Link to this paper" alt="Link to this paper" style="max-width: 15px"></span></a>
-    </h4>
-    <blockquote>
-        We trained a feed-forward neural network to play checkers. The network acts as both the value function for a min-max algorithm and a heuristic for pruning tree branches in a reinforcement learning setting. We used no supervised signal for training - a set of networks was assessed by playing against each-other and the winning networks' weights were adapted following the ES algorithm.
-    </blockquote>
-    Yarin Gal, Mireille Avigal<br>
-    <i>Machine Learning and Applications (IEEE), 2010</i><br>  [<a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5708948&tag=1" target="_blank">Paper</a>] [<a href="BibTex/Gal2010Overcoming.bib" target="_blank">BibTex</a>]
-</p> -->
+<p id="Osband2016lower">
+<a href="https://arxiv.org/abs/1608.02732" target="_blank">
+    <span class="image left">
+        <img src="images/force_bound.jpg" title="On Lower Bounds for Regret in Reinforcement Learning" alt="On Lower Bounds for Regret in Reinforcement Learning" style="max-width: 220px">
+    </span>
+</a>
+<h4>
+    On Lower Bounds for Regret in Reinforcement Learning
+     <a href="research.html#Osband2016lower"><span class="image right"><img src="images/link-to-here.png" title="Link to this paper" alt="Link to this paper" style="max-width: 15px"></span></a>
+</h4>
+A <a href="http://www.stat.berkeley.edu/~bartlett/papers/bt-rarbarllwcm-09.pdf" target="_blank">previously published proof</a> for the lower bounds on what is possible for any reinforcement learning algorithm are incorrect.
+posterior sampling without episodic reset is incorrect.
+This note clarifies some of the issues in this space and presents some further conjectures on what might be true in this space.
+<br><br>
+Ian Osband, Benjamin Van Roy<br>
+<i>arXiv technical pre-print 2016</i><br>
+[<a href="https://arxiv.org/abs/1608.02732" target="_blank">Paper</a>]
+</p>
+<br>
+<br>
 
-<!--        <p id=""><a href="https://web.stanford.edu/class/msande338/" target="_blank"><span class="image left"><img src="images/robots.jpg" title="" alt="" style="max-width: 140px"></span></a><h4> MS&ampE 338 - Reinforcement learning - assistant instructor</h4><p>An advanced PhD level course aimed at graduate students looking to engage in research. I managed the class research projects and gave several lectures throughout the course.</p>
 
-                </div> -->
-            </section>
+<p id="Osband2016why">
+<a href="https://arxiv.org/abs/1607.00215" target="_blank">
+    <span class="image left">
+        <img src="images/rect_conf_2.png" title="Why is Posterior Sampling Better than Optimism for Reinforcement Learning?" alt="Why is Posterior Sampling Better than Optimism for Reinforcement Learning?" style="max-width: 220px">
+    </span>
+</a>
+<h4>
+    Why is Posterior Sampling Better than Optimism for Reinforcement Learning?
+     <a href="research.html#Osband2016why"><span class="image right"><img src="images/link-to-here.png" title="Link to this paper" alt="Link to this paper" style="max-width: 15px"></span></a>
+</h4>
+Computational results demonstrate that PSRL dramatically outperforms UCRL2. We provide insight into the extent of this performance boost and the phenomenon that drives it.
+<br><br>
+Ian Osband, Benjamin Van Roy<br>
+<i>EWRL 2016 (full oral)</i><br>
+[<a href="https://arxiv.org/abs/1607.00215" target="_blank">Paper</a>]
+[<a href="https://github.com/iosband/TabulaRL" target="_blank">Code</a>]
+</p>
+<br>
+<br>
+
+
+<p id="Osband2016deep">
+<a href="https://arxiv.org/abs/1602.04621" target="_blank">
+    <span class="image left">
+        <img src="images/pacman.jpg" title="Deep Exploration via Bootstrapped DQN" alt="Deep Exploration via Bootstrapped DQN" style="max-width: 220px">
+    </span>
+</a>
+<h4>
+    Deep Exploration via Bootstrapped DQN
+     <a href="research.html#Osband2016deep"><span class="image right"><img src="images/link-to-here.png" title="Link to this paper" alt="Link to this paper" style="max-width: 15px"></span></a>
+</h4>
+Deep exploration and deep reinforcement learning. Takes the insight from efficient exploration via randomized value functions and attains state of the art results on Atari. Includes some sweet vids.
+<br><br>
+Ian Osband, Charles Blundell, Alex Pritzel, Benjamin Van Roy<br>
+<i>NIPS 2016</i><br>
+[<a href="https://arxiv.org/abs/1602.04621" target="_blank">Paper</a>]
+[<a href="https://www.youtube.com/playlist?list=PLdy8eRAW78uLDPNo1jRv8jdTx7aup1ujM" target="_blank">Videos</a>]
+</p>
+<br>
+<br>
+
+
+<p id="Osband2015bootstrapped">
+<a href="https://arxiv.org/abs/1507.00300" target="_blank">
+    <span class="image left">
+        <img src="images/deep.jpg" title="Bootstrapped Thompson Sampling and Deep Exploration" alt="Bootstrapped Thompson Sampling and Deep Exploration" style="max-width: 220px">
+    </span>
+</a>
+<h4>
+    Bootstrapped Thompson Sampling and Deep Exploration
+     <a href="research.html#Osband2015bootstrapped"><span class="image right"><img src="images/link-to-here.png" title="Link to this paper" alt="Link to this paper" style="max-width: 15px"></span></a>
+</h4>
+A principled approach to efficient exploration with generalization that can be implemented for deep learning models at scale. Use an augmented bootstrap to approximate the posterior distribution.
+<br><br>
+Ian Osband, Benjamin Van Roy<br>
+<i>arXiv technical pre-print 2015</i><br>
+[<a href="https://arxiv.org/abs/1507.00300" target="_blank">Paper</a>]
+</p>
+<br>
+<br>
+
+<p id="Osband2015generalization">
+<a href="https://arxiv.org/abs/1402.0635" target="_blank">
+    <span class="image left">
+        <img src="images/dog.jpg" title="Generalization and Exploration via Randomized Value functions" alt="Generalization and Exploration via Randomized Value functions" style="max-width: 220px">
+    </span>
+</a>
+<h4>
+    Generalization and Exploration via Randomized Value functions
+     <a href="research.html#Osband2015generalization"><span class="image right"><img src="images/link-to-here.png" title="Link to this paper" alt="Link to this paper" style="max-width: 15px"></span></a>
+</h4>
+You can combine efficient exploration and generalization, all without a model-based planning step. Some cool empirical results and also some theory. My favorite paper.
+<br><br>
+Ian Osband, Zheng Wen, Benjamin Van Roy<br>
+<i>ICML 2016</i><br>
+[<a href="https://arxiv.org/abs/1402.0635" target="_blank">Paper</a>]
+[<a href="http://techtalks.tv/talks/generalization-and-exploration-via-randomized-value-functions/62467/" target="_blank">Talk</a>]
+[<a href="docs/ICML2016_RLSVI_Poster.pdf" target="_blank">Poster</a>]
+[<a href="https://docs.google.com/presentation/d/1OkJjM1EGEHbcJM--98hWTc9fZdlMnegY8NFUToYcrLQ/edit?usp=sharing" target="_blank">Slides</a>]
+
+</p>
+<br>
+<br>
+
+
+<p id="Osband2014model">
+<a href="http://papers.nips.cc/paper/5245-model-based-reinforcement-learning-and-the-eluder-dimension" target="_blank">
+    <span class="image left">
+        <img src="images/eluder.jpg" title="Model-based Reinforcement Learning and the Eluder Dimension" alt="Model-based Reinforcement Learning and the Eluder Dimension" style="max-width: 220px">
+    </span>
+</a>
+<h4>
+    Model-based Reinforcement Learning and the Eluder Dimension
+     <a href="research.html#Osband2014model"><span class="image right"><img src="images/link-to-here.png" title="Link to this paper" alt="Link to this paper" style="max-width: 15px"></span></a>
+</h4>
+The first general analysis of model based RL in terms of the dimensionality, rather than the cardinality, of the system. Several new state of the art results including linear systems.
+<br><br>
+Ian Osband, Benjamin Van Roy<br>
+<i>NIPS 2014</i><br>
+[<a href="http://papers.nips.cc/paper/5245-model-based-reinforcement-learning-and-the-eluder-dimension" target="_blank">Paper</a>]
+[<a href="docs/eluder_mdp_poster.pdf" target="_blank">Poster</a>]
+</p>
+<br>
+<br>
+
+
+<p id="Osband2014factored">
+<a href="http://papers.nips.cc/paper/5445-near-optimal-reinforcement-learning-in-factored-mdps" target="_blank">
+    <span class="image left">
+        <img src="images/factored.jpg" title="Near-optimal Reinforcement Learning in Factored MDPs" alt="Near-optimal Reinforcement Learning in Factored MDPs" style="max-width: 220px">
+    </span>
+</a>
+<h4>
+    Near-optimal Reinforcement Learning in Factored MDPs
+     <a href="research.html#Osband2014factored"><span class="image right"><img src="images/link-to-here.png" title="Link to this paper" alt="Link to this paper" style="max-width: 15px"></span></a>
+</h4>
+If the environment is a structured graph (aka factored MDP), then you can exploit that to learn quickly. You can adapt UCB-style approaches for this, posterior sampling gets it for free.
+<br><br>
+Ian Osband, Benjamin Van Roy<br>
+<i>NIPS 2014 (spotlight), INFORMS 2014</i><br>
+[<a href="http://papers.nips.cc/paper/5445-near-optimal-reinforcement-learning-in-factored-mdps" target="_blank">Paper</a>]
+[<a href="docs/factored_mdp_poster.pdf" target="_blank">Poster</a>]
+[<a href="docs/factored_spot_nips_v2.pdf" target="_blank">Spotlight</a>]
+</p>
+<br>
+<br>
+
+<p id="Osband2013more">
+<a href="http://papers.nips.cc/paper/5185-more-efficient-reinforcement-learning-via-posterior-sampling" target="_blank">
+    <span class="image left">
+        <img src="images/dice.jpg" title="(More) Efficient Reinforcement Learning via Posterior Sampling" alt="(More) Efficient Reinforcement Learning via Posterior Sampling" style="max-width: 220px">
+    </span>
+</a>
+<h4>
+    (More) Efficient Reinforcement Learning via Posterior Sampling
+     <a href="research.html#Osband2013more"><span class="image right"><img src="images/link-to-here.png" title="Link to this paper" alt="Link to this paper" style="max-width: 15px"></span></a>
+</h4>
+You don't need to use loose UCB-style algorithms to get regret bounds for reinforcement learning. Posterior sampling is more efficient in terms of computation and data and shares similar gaurantees.
+<br><br>
+Ian Osband, Dan Russo, Benjamin Van Roy<br>
+<i>NIPS 2013, RLDM 2013</i><br>
+[<a href="http://papers.nips.cc/paper/5185-more-efficient-reinforcement-learning-via-posterior-sampling" target="_blank">Paper</a>]
+[<a href="docs/psrl_poster_2013.pdf" target="_blank">Poster</a>]
+</p>
+<br>
+<br>
+
+<p id="Osband2012deep">
+<a href="http://cs229.stanford.edu/proj2012/BussetiOsbandWong-DeepLearningForTimeSeriesModeling.pdf" target="_blank">
+    <span class="image left">
+        <img src="images/stocks_square.jpg" title="Deep Learning for Time Series Modeling" alt="Deep Learning for Time Series Modeling" style="max-width: 220px">
+    </span>
+</a>
+<h4>
+    Deep Learning for Time Series Modeling
+     <a href="research.html#Osband2012deep"><span class="image right"><img src="images/link-to-here.png" title="Link to this paper" alt="Link to this paper" style="max-width: 15px"></span></a>
+</h4>
+We apply deep learning techniques to energy load forecasting across 20 geographic regions.
+We found that recurrent network architectures were particularly suited to this task.
+Class project for CS 229 in my first quarter at Stanford.
+<br><br>
+Ian Osband, Enso Busseti, Scott Wong<br>
+<i>Class project 2012</i><br>
+[<a href="http://cs229.stanford.edu/proj2012/BussetiOsbandWong-DeepLearningForTimeSeriesModeling.pdf" target="_blank">Paper</a>]
+</p>
+<br>
+<br>
+
+</div>
+</section>
 
 
             <!-- Four -->
