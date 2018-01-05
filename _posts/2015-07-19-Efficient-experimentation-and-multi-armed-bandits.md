@@ -23,7 +23,7 @@ What is a multi-armed bandit? Well... here are a few types:
 <div>
  <img src="http://serptool.com/img/thief.png" alt="thief" style="height:170px">
  <img src="http://epguides.com/Zorro_1957/cast.jpg" alt="zorro" style="height:170px">
- <img src="http://research.microsoft.com/en-us/projects/bandits/MAB-2.jpg" alt="mab" style="height:170px">
+ <img src="http://blogs.mathworks.com/images/loren/2016/multiarmedbandit.jpg" alt="mab" style="height:170px">
 </div>
 </center>
 
