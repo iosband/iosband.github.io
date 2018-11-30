@@ -105,6 +105,7 @@ and
                 <p>All the links you could want</p>
             </header>
 
+
 <p id="Osband2016Thesis">
 <h4>
     PhD Thesis: Deep Exploration via Randomized Value Functions
@@ -112,7 +113,7 @@ and
 </h4>
 <a href="https://searchworks.stanford.edu/view/11891201" target="_blank">
     <span class="image left">
-        <img src="images/phd_hat.jpg" title="Deep Exploration via Randomized Value Functions" alt="Deep Exploration via Randomized Value Functions" style="max-width: 160px">
+        <img src="images/deep_space.jpg" title="Deep Exploration via Randomized Value Functions" alt="Deep Exploration via Randomized Value Functions" style="max-width: 160px">
     </span>
 </a>
 Statistically efficient RL requires "deep exploration".
@@ -124,6 +125,109 @@ Ian Osband<br>
 [<a href="https://searchworks.stanford.edu/view/11891201" target="_blank">Stanford link</a>]
 [<a href="http://iosband.github.io/docs/iosband_thesis.pdf" target="_blank">Mirror</a>]
 [<a href="https://www.youtube.com/watch?v=ck4GixLs4ZQ" target="_blank">YouTube</a>]
+</p>
+<br>
+
+<p id="DeepExplore">
+<h4>
+    Deep Exploration via Randomized Value Functions
+     <a href="research.html#DeepExplore"><span class="image right"><img src="images/link-to-here.png" title="Link to this paper" alt="Link to this paper" style="max-width: 15px"></span></a>
+</h4>
+<a href="https://arxiv.org/abs/1703.07608" target="_blank">
+    <span class="image left">
+        <img src="images/bottomless_pit.png" title="Deep Exploration via Randomized Value Functions" alt="Deep Exploration via Randomized Value Functions" style="max-width: 160px">
+    </span>
+</a>
+Journal paper that takes the best parts of my PhD thesis, and lots of other pieces of work from our group over the past few years.
+<br><br>
+Ian Osband, Benjamin Van Roy, Daniel Russo, Zheng Wen<br>
+<i>Journal of Machine Learning Research 2018</i><br>
+[<a href="https://arxiv.org/abs/1703.07608" target="_blank">Paper</a>]
+</p>
+<br>
+
+
+<p id="PriorFunction">
+<h4>
+    Randomized Prior Functions for Deep Reinforcement Learning
+     <a href="research.html#PriorFunction"><span class="image right"><img src="images/link-to-here.png" title="Link to this paper" alt="Link to this paper" style="max-width: 15px"></span></a>
+</h4>
+<a href="https://arxiv.org/abs/1703.07608" target="_blank">
+    <span class="image left">
+        <img src="images/prior_fun.png" title="Randomized Prior Functions for Deep Reinforcement Learning" alt="Randomized Prior Functions for Deep Reinforcement Learning" style="max-width: 160px">
+    </span>
+</a>
+Bootstrapping for uncertainty estimates has an obvious flaw in "sparse reward" environments... why wouldn't you just always predict zero? 
+We provide a simple solution: add a random untrainable "prior function" to each ensemble member.
+Matches Bayesian inference for linear systems, good empirical results scaling to Montezuma's revenge! 
+<br><br>
+Ian Osband, John Aslanides, Albin Cassirer<br>
+<i>NeurIPS 2018</i><br>
+[<a href="https://bit.ly/rpf_nips" target="_blank">Website</a>]
+[<a href="https://arxiv.org/abs/1806.03335" target="_blank">Paper</a>]
+[<a href="https://colab.sandbox.google.com/drive/1hOZeHjSdoel_-UoeLfg1aRC4uV_6gX1g" target="_blank">Code</a>]
+[<a href="docs/rpf_nips_poster.pdf" target="_blank">Poster</a>]
+[<a href="docs/rpf_nips_2018_no_animation.pdf" target="_blank">Spotlight</a>]
+</p>
+<br>
+
+
+<p id="SeedSample">
+<h4>
+    Scalable Coordinated Exploration in Concurrent Reinforcement Learning
+     <a href="research.html#SeedSample"><span class="image right"><img src="images/link-to-here.png" title="Link to this paper" alt="Link to this paper" style="max-width: 15px"></span></a>
+</h4>
+<a href="https://arxiv.org/abs/1703.07608" target="_blank">
+    <span class="image left">
+        <img src="images/concurrent_robot.png" title="Scalable Coordinated Exploration in Concurrent Reinforcement Learning" alt="Scalable Coordinated Exploration in Concurrent Reinforcement Learning" style="max-width: 160px">
+    </span>
+</a>
+Imagine you have a team of agents working in parallel, how can you do efficient exploration for the group as a whole?
+Turns out that "randomized value functions" scale to this domain in a natural way... if you do it in the right way!
+<br><br>
+Maria Dimakopoulou, Ian Osband, Benjamin Van Roy<br>
+<i>NeurIPS 2018</i><br>
+[<a href="https://arxiv.org/abs/1805.08948" target="_blank">Paper</a>]
+</p>
+<br>
+
+<p id="ThompsonTutorial">
+<h4>
+    A Tutorial on Thompson Sampling
+     <a href="research.html#ThompsonTutorial"><span class="image right"><img src="images/link-to-here.png" title="Link to this paper" alt="Link to this paper" style="max-width: 15px"></span></a>
+</h4>
+<a href="https://web.stanford.edu/~bvr/pubs/TS_Tutorial.pdf" target="_blank">
+    <span class="image left">
+        <img src="images/dice.png" title="A Tutorial on Thompson Sampling" alt="A Tutorial on Thompson Sampling" style="max-width: 160px">
+    </span>
+</a>
+An introduction to, and overview of, the Thompson sampling principle: what does it mean, what are its benefits and how can it be applied? A great overview of what this algorithm really does, without getting too drawn into "regret bounds" and analysis... lot's of good examples!
+<br><br>
+Daniel Russo, Benjamin Van Roy, Abbas Kazerouni, Ian Osband, Zheng Wen<br>
+<i>Foundations and Trends in Machine Learning 2018</i><br>
+[<a href="https://web.stanford.edu/~bvr/pubs/TS_Tutorial.pdf" target="_blank">Paper</a>]
+[<a href="https://github.com/iosband/ts_tutorial" target="_blank">Code</a>]
+</p>
+<br>
+
+
+<p id="DeepQdemonstration">
+<h4>
+    Deep Q-learning from Demonstrations
+     <a href="research.html#DeepQdemonstration"><span class="image right"><img src="images/link-to-here.png" title="Link to this paper" alt="Link to this paper" style="max-width: 15px"></span></a>
+</h4>
+<a href="https://arxiv.org/abs/1704.03732" target="_blank">
+    <span class="image left">
+        <img src="images/teacher-and-student.png" title="Deep Q-learning from Demonstrations" alt="Deep Q-learning from Demonstrations" style="max-width: 160px">
+    </span>
+</a>
+We very rarely want to deploy an RL system without any prior knowledge of how to behave.
+We look at a simple + scalable approach to incorporating expert knowledge with deep RL.
+This leads to many state of the art scores on Atari 2600 games.
+<br><br>
+Todd Hester et al (I'm one of the "al")<br>
+<i>AAAI 2018</i><br>
+[<a href="https://arxiv.org/abs/1704.03732" target="_blank">arXiv</a>]
 </p>
 <br>
 
@@ -202,7 +306,7 @@ Ian Osband, Benjamin Van Roy<br>
 Deep exploration and deep reinforcement learning. Takes the insight from efficient exploration via randomized value functions and attains state of the art results on Atari. Includes some sweet vids.
 <br><br>
 Ian Osband, Charles Blundell, Alex Pritzel, Benjamin Van Roy<br>
-<i>NIPS 2016</i><br>
+<i>NeurIPS 2016</i><br>
 [<a href="https://arxiv.org/abs/1602.04621" target="_blank">Paper</a>]
 [<a href="https://www.youtube.com/playlist?list=PLdy8eRAW78uLDPNo1jRv8jdTx7aup1ujM" target="_blank">Videos</a>]
 </p>
@@ -235,7 +339,7 @@ Ian Osband, Benjamin Van Roy<br>
 
 <a href="https://arxiv.org/abs/1402.0635" target="_blank">
     <span class="image left">
-        <img src="images/dog.jpg" title="Generalization and Exploration via Randomized Value functions" alt="Generalization and Exploration via Randomized Value functions" style="max-width: 160px">
+        <img src="images/dog.png" title="Generalization and Exploration via Randomized Value functions" alt="Generalization and Exploration via Randomized Value functions" style="max-width: 160px">
     </span>
 </a>
 You can combine efficient exploration and generalization, all without a model-based planning step. Some cool empirical results and also some theory. My favorite paper.
@@ -264,7 +368,7 @@ Ian Osband, Zheng Wen, Benjamin Van Roy<br>
 The first general analysis of model based RL in terms of the dimensionality, rather than the cardinality, of the system. Several new state of the art results including linear systems.
 <br><br>
 Ian Osband, Benjamin Van Roy<br>
-<i>NIPS 2014</i><br>
+<i>NeurIPS 2014</i><br>
 [<a href="http://papers.nips.cc/paper/5245-model-based-reinforcement-learning-and-the-eluder-dimension" target="_blank">Paper</a>]
 [<a href="docs/eluder_mdp_poster.pdf" target="_blank">Poster</a>]
 </p>
@@ -284,7 +388,7 @@ Ian Osband, Benjamin Van Roy<br>
 If the environment is a structured graph (aka factored MDP), then you can exploit that to learn quickly. You can adapt UCB-style approaches for this, posterior sampling gets it for free.
 <br><br>
 Ian Osband, Benjamin Van Roy<br>
-<i>NIPS 2014 (spotlight), INFORMS 2014</i><br>
+<i>NeurIPS 2014 (spotlight), INFORMS 2014</i><br>
 [<a href="http://papers.nips.cc/paper/5445-near-optimal-reinforcement-learning-in-factored-mdps" target="_blank">Paper</a>]
 [<a href="docs/factored_mdp_poster.pdf" target="_blank">Poster</a>]
 [<a href="docs/factored_spot_nips_v2.pdf" target="_blank">Spotlight</a>]
@@ -299,13 +403,13 @@ Ian Osband, Benjamin Van Roy<br>
 
 <a href="http://papers.nips.cc/paper/5185-more-efficient-reinforcement-learning-via-posterior-sampling" target="_blank">
     <span class="image left">
-        <img src="images/dice.jpg" title="(More) Efficient Reinforcement Learning via Posterior Sampling" alt="(More) Efficient Reinforcement Learning via Posterior Sampling" style="max-width: 160px">
+        <img src="images/dice.png" title="(More) Efficient Reinforcement Learning via Posterior Sampling" alt="(More) Efficient Reinforcement Learning via Posterior Sampling" style="max-width: 160px">
     </span>
 </a>
 You don't need to use loose UCB-style algorithms to get regret bounds for reinforcement learning. Posterior sampling is more efficient in terms of computation and data and shares similar gaurantees.
 <br><br>
 Ian Osband, Dan Russo, Benjamin Van Roy<br>
-<i>NIPS 2013, RLDM 2013</i><br>
+<i>NeurIPS 2013, RLDM 2013</i><br>
 [<a href="http://papers.nips.cc/paper/5185-more-efficient-reinforcement-learning-via-posterior-sampling" target="_blank">Paper</a>]
 [<a href="docs/psrl_poster_2013.pdf" target="_blank">Poster</a>]
 </p>
