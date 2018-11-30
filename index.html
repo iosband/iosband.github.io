@@ -78,7 +78,7 @@
 							<div class="6u 12u$(medium)">
 								<header class="major">
 									<h2>About me</h2>
-									<div class="11u"><span class="image fit"><img src="images/tie.jpg" style="max-width: 500px" alt="" /></span></div>
+									<div class="11u"><span class="image fit"><img src="images/tie.jpg" style="max-width: 400px" alt="" /></span></div>
 								</header>
 							</div>
 							<div class="6u$ 12u$(medium)">
@@ -142,6 +142,71 @@
                 </div> -->
               <div class="feature">
                   <div class="image rounded">
+                      <a href="https://arxiv.org/abs/1703.07608">
+                          <img src="images/bottomless_pit.png" alt="" />
+                      </a>
+                  </div>
+                  <div class="content">
+                      <header>
+                          <h4>Deep Exploration via Randomized Value Functions</h4>
+                          <p>JMLR 2018 (Accepted)</p>
+                      </header>
+                      <p>Journal paper that embodies the best pieces of research from my PhD and other pieces of work from our group... my favorite paper!
+                      </p>
+                  </div>
+                </div>
+              <div class="feature">
+                  <div class="image rounded">
+                      <a href="https://web.stanford.edu/~bvr/pubs/TS_Tutorial.pdf">
+                          <img src="images/dice.jpg" alt="" />
+                      </a>
+                  </div>
+                  <div class="content">
+                      <header>
+                          <h4>A Tutorial on Thompson Sampling</h4>
+                          <p>Foundations and Trends in Machine Learning 2018</p>
+                      </header>
+                      <p>A really nice tutorial on Thompson sampling: what it is, why it works and when to use it.
+                      Includes lots of examples (+ <a href="https://github.com/iosband/ts_tutorial" target="_blank">code</a>).
+                      Focus on building an intuition, rather than getting bogged down in theorems.
+                      </p>
+                  </div>
+                </div>
+<!-------------------------------------------------------------------------------------------->
+              <div class="feature">
+                  <div class="image rounded">
+                      <a href="https://bit.ly/rpf_nips">
+                          <img src="images/prior_fun.png" alt="" />
+                      </a>
+                  </div>
+                  <div class="content">
+                      <header>
+                          <h4>Randomized Prior Functions for Deep Reinforcement Learning</h4>
+                          <p>NeurIPS 2018 (Spotlight)</p>
+                      </header>
+                      <p>Add a "prior effect" to your bootstrap posterior with one simple trick: add a random function offset to each neural net in your ensemble!
+                      </p>
+                  </div>
+                </div>
+              <div class="feature">
+                  <div class="image rounded">
+                      <a href="https://web.stanford.edu/~bvr/pubs/TS_Tutorial.pdf">
+                          <img src="images/concurrent_robot.png" alt="" />
+                      </a>
+                  </div>
+                  <div class="content">
+                      <header>
+                          <h4>Scalable Coordinated Exploration in Concurrent Reinforcement Learning</h4>
+                          <p>NeurIPS 2018</p>
+                      </header>
+                      <p>If you have a team of agents, rather than just one, you need to coordinate them to explore efficiently.
+                      Randomized value functions work well here... if you do it right...
+                      </p>
+                  </div>
+                </div>
+<!-------------------------------------------------------------------------------------------->
+              <div class="feature">
+                  <div class="image rounded">
                       <a href="https://arxiv.org/abs/1607.00215">
                           <img src="images/rect_conf.png" alt="" />
                       </a>
@@ -149,7 +214,7 @@
                   <div class="content">
                       <header>
                           <h4>Why is Posterior Sampling Better than Optimism for Reinforcement Learning?</h4>
-                          <p>EWRL 2016 (full oral)</p>
+                          <p>ICML 2016 (full oral), EWRL 2016</p>
                       </header>
                       <p>Computational results demonstrate that PSRL dramatically outperforms UCRL2. We provide insight into the extent of this performance boost and the phenomenon that drives it.</p>
                   </div>
@@ -163,7 +228,7 @@
                   <div class="content">
                       <header>
                           <h4>Deep Exploration via Bootstrapped Deep Q-Networks</h4>
-                          <p>NIPS 2016</p>
+                          <p>NeurIPS 2016</p>
                       </header>
                       <p>Deep exploration and deep reinforcement learning. Takes the insight from efficient exploration via randomized value functions and attains state of the art results on Atari. Includes some sweet vids.</p>
                   </div>
@@ -193,7 +258,7 @@
 										<h4>Generalization and Exploration via Randomized Value functions</h4>
 										<p>ICML 2016</p>
 									</header>
-									<p>You can combine efficient exploration and generalization, all without a model-based planning step. Some cool empirical results and also some theory. My favorite paper.</p>
+									<p>You can combine efficient exploration and generalization, all without a model-based planning step. Some cool empirical results and also some theory.</p>
 								</div>
 							</div>
 
@@ -206,7 +271,7 @@
                     <div class="content">
                         <header>
                             <h4>Model-based Reinforcement Learning and the Eluder Dimension</h4>
-                            <p>NIPS 2014</p>
+                            <p>NeurIPS 2014</p>
                         </header>
                         <p>The first general analysis of model based RL in terms of the dimensionality, rather than the cardinality, of the system. Several new state of the art results including linear systems.</p>
                     </div>
@@ -220,7 +285,7 @@
                   <div class="content">
                       <header>
                           <h4>Near-optimal Reinforcement Learning in Factored MDPs</h4>
-                          <p>NIPS 2014 (Spotlight), INFORMS 2014</p>
+                          <p>NeurIPS 2014 (Spotlight), INFORMS 2014</p>
                       </header>
                       <p>If the environment is a structured graph (aka factored MDP), then you can exploit that to learn quickly. You can adapt UCB-style approaches for this, posterior sampling gets it for free. </p>
                   </div>
@@ -234,7 +299,7 @@
                   <div class="content">
                       <header>
                           <h4>(More) Efficient Reinforcement Learning via Posterior Sampling</h4>
-                          <p>NIPS 2013, RLDM 2013</p>
+                          <p>NeurIPS 2013, RLDM 2013</p>
                       </header>
                       <p>You don't need to use loose UCB-style algorithms to get regret bounds for reinforcement learning. Posterior sampling is more efficient in terms of computation and data and shares similar gaurantees. </p>
                   </div>
@@ -283,7 +348,7 @@
 					<ul class="icons">
                         <li><a href="mailto:ian.osband@gmail.com" class="icon fa-mail-reply"></a></li>
 						<li><a href="https://www.facebook.com/ian.osband" class="icon fa-facebook"></a></li>
-						<!-- <li><a href="#" class="icon fa-twitter"></a></li> -->
+						<li><a href="https://twitter.com/ianosband?lang=en" class="icon fa-twitter"></a></li>
 						<li><a href="https://instagram.com/ianosband/" class="icon fa-instagram"></a></li>
                         <li><a href="https://github.com/iosband" class="icon fa-github"></a></li>
                         <li><a href="https://bitbucket.org/iosband/" class="icon fa-bitbucket"></a></li>
