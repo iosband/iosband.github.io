@@ -430,49 +430,73 @@
 			padding: 0;
 		}
 
+/* Feature Grid */
+.feature-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* This will space out your features evenly */
+    gap: 20px; /* This adds space between your features */
+}
+
 /* Feature */
+.feature {
+    flex-basis: calc(50% - 20px); /* Subtracts the gap from the 50% width */
+    display: flex;
+    flex-direction: row; /* This is the default, but it's here for clarity */
+    margin-bottom: 3em;
+    align-items: center; /* This will vertically center the content within each feature */
+}
 
-	.feature-grid {
-		position: relative;
-	}
+/* Content and Image inside Feature */
+.feature .content, .feature .image {
+    flex: 1;
+    text-align: center;
+}
 
-		.feature-grid:after {
-			clear: both;
-			content: '';
-			display: block;
-		}
+.feature .image {
+    flex: none; /* This will prevent the image from growing and shrinking */
+    width: 250px; /* Set this to the width you want for your images */
+    height: 250px; /* Make the height equal to the width */
+    display: flex;
+    justify-content: center; /* Center the image within its container */
+    align-items: center; /* Center the image vertically */
+}
 
-		.feature-grid .feature {
-			display: inline-block;
-			float: left;
-			margin-bottom: 3em;
-			width: 50%;
-		}
+/* Adjusting order for alternate features */
+.feature-grid .feature:nth-child(odd) .content {
+    order: 1;
+	text-align: right;
+}
 
-			.feature-grid .feature .content {
-				width: 60%;
-			}
+.feature-grid .feature:nth-child(odd) .image {
+    order: 2;
+	margin-left: 1em;
+}
 
-			.feature-grid .feature .image {
-				width: 30%;
-			}
+.feature-grid .feature:nth-child(even) .content {
+    order: 2;
+	text-align: left;
+}
 
-				.feature-grid .feature .image img {
-					display: inline;
-					max-width: 100%;
-				}
+.feature-grid .feature:nth-child(even) .image {
+    order: 1;
+	margin-right: 1em;
+}
 
-			.feature-grid .feature:nth-child(odd) .content, .feature-grid .feature:nth-child(odd) .image {
-				float: right;
-				margin-right: 5%;
-				text-align: right;
-			}
+/* Image styling */
+.feature-grid .feature .image img {
+    max-width: 100%; /* Ensures the image is not larger than its container */
+    height: auto; /* Maintains the aspect ratio of the image */
+}
 
-			.feature-grid .feature:nth-child(even) .content, .feature-grid .feature:nth-child(even) .image {
-				float: left;
-				margin-left: 5%;
-				text-align: left;
-			}
+/* Clearfix for the feature-grid if needed */
+.feature-grid:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
 
 /* Icon */
 
