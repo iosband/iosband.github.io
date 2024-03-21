@@ -517,15 +517,44 @@
 
   .feature .image {
     order: 1; /* Ensures image is above the content */
+    max-width: 250px; /* Maximum width for the image */
+    max-height: 250px; /* Maximum height for the image */
     width: 80%; /* Adjust image width on mobile as needed */
     height: auto; /* Height can be auto to maintain aspect ratio of image */
   }
 
-  /* Adjust image settings for mobile, optionally remove fixed aspect ratio here */
+  /* Adjust image settings for mobile, set max height and width while maintaining aspect ratio */
   .feature-grid .feature .image img {
-    width: 100%; /* Image fills its container */
+    max-width: 100%; /* Image fills its container */
+    max-height: 250px; /* Maximum height for the image */
+    width: auto; /* Width is set to auto to maintain aspect ratio */
     height: auto; /* Height is set to auto to maintain aspect ratio */
     object-fit: contain; /* Ensures the whole image is visible */
+  }
+    /* This targets the container of the about section */
+  .container.75% {
+    width: 100% !important; /* Makes the container take full width */
+    padding: 0 2em; /* Adds some padding on the sides */
+  }
+  
+  /* Adjust the row within the container for smaller screens */
+  .row.200% {
+    display: block; /* Stack elements instead of side-by-side */
+  }
+  
+  /* Targeting the classes for image and text containers in the 'About Me' section */
+  .5u, .10u$(medium), .7u$, .14u$(medium) {
+    width: 100% !important; /* Each element takes full width */
+    clear: both; /* Clears the floats if any */
+    text-align: center; /* Centers the text */
+    margin: 0 0 2em 0; /* Adds some margin at the bottom of each section */
+  }
+
+  /* Additional adjustments to the image to ensure it scales nicely and is not too large */
+  .image.fit img {
+    max-width: 100%; /* Ensures image is not larger than its container */
+    height: auto; /* Maintains the aspect ratio */
+    margin: 0 auto 2em; /* Adds margin at the bottom and auto on the sides to center it */
   }
 }
 
@@ -1228,6 +1257,7 @@
 					margin-left: 0;
 					padding-left: 0;
 				}
+
 
 /* TIMELINE */
 
