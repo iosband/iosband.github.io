@@ -1240,7 +1240,7 @@
     order: 1;
     max-width: 250px;
     width: 100%; /* Make the image container take full width */
-    margin: 0 auto 2em;
+    margin-left: 3.5em;
     display: flex; /* Use flexbox to center the image */
     justify-content: center; /* Center the image horizontally */
     align-items: center; /* Center the image vertically */
@@ -1249,6 +1249,7 @@
   .feature .image.rounded a {
     width: 100%; /* Allow the anchor to fill the width of its container */
     display: block; /* Make the anchor tag a block element to fill its container */
+	margin-left: 3.5em;
   }
 
   .feature .image.rounded img {
