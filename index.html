@@ -1,260 +1,197 @@
-<!DOCTYPE HTML>
-<!--
-	Spatial by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
-<html>
-	<head>
-		<title>Ian Osband - Homepage</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-layers.min.js"></script>
-		<script src="js/init.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ian Osband - Homepage</title>
+    <meta name="description" content="Ian Osband's personal website showcasing research in reinforcement learning and decision making under uncertainty.">
+    <link rel="stylesheet" href="css/skel.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-xlarge.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-layers.min.js"></script>
+    <script src="js/init.js"></script>
 
-        <!-- MathJax options -->
-        <script type="text/x-mathjax-config">
-          MathJax.Hub.Config({
+    <!-- Custom CSS -->
+    <style>
+      .paper-title {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .paper-title:hover {
+        text-decoration: underline;
+      }
+    </style>
+
+
+
+    <!-- MathJax options -->
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
             tex2jax: {
-              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-              displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-              processEscapes: true
+                inlineMath: [['$', '$'], ["\\(", "\\)"]],
+                displayMath: [['$$', '$$'], ["\\[", "\\]"]],
+                processEscapes: true
             }
-          });
-        </script>
+        });
+    </script>
 
-        <!-- Google tracking -->
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <!-- Google tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-65368616-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-65368616-1');
+    </script>
 
-          ga('create', 'UA-65368616-1', 'auto');
-          ga('send', 'pageview');
-        </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="landing">
+    <!-- Header -->
+    <header id="header" class="alt">
+        <h1><strong><a href="/">OpenAI</a></strong> Reinforcement Learning</h1>
+        <nav id="nav">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/research.html">Research</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/docs/iosband_resume.pdf">CV</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <script type="text/javascript"
-            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-        </script>
+    <!-- Banner -->
+    <section id="banner">
+        <h2>Ian Osband</h2>
+        <p>Data, decisions and learning</p>
+    </section>
 
-		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-xlarge.css" />
-		</noscript>
-	</head>
-	<body class="landing">
-
-		<!-- Header -->
-			<header id="header" class="alt">
-          <h1><strong><a href="/index.html">OpenAI</a></strong> Reinforcement Learning<br>
-          </h1>
-				<nav id="nav">
-					<ul>
-						<li><a href="/">Home</a></li>
-            <li><a href="/research.html">Research</a></li>
-            <li><a href="/blog.html">Blog</a></li>
-						<li><a href="/docs/iosband_resume.pdf">CV</a></li>
-					</ul>
-				</nav>
-			</header>
-
-		<!-- Banner -->
-			<section id="banner">
-				<h2>Ian Osband</h2>
-				<p>Data, decisions and learning</p>
-			</section>
-
-        <!-- About me -->
-        <section id="about" class="wrapper style1">
-            <div class="container 75%">
-                <div class="row 200%">
-                    <div class="6u 12u$(medium)">
-                        <header class="major">
-                            <h2>About me</h2>
-                            <div class="11u"><span class="image fit"><img src="images/ian_face.jpeg" style="max-width: 400px" alt="Ian Osband" /></span></div>
-                        </header>
-                    </div>
-                    <div class="6u$ 12u$(medium)">
-                        <br>
-                        <p>I am a researcher at <a href="https://openai.com" target="_blank" rel="noopener noreferrer">OpenAI</a> working to solve artificial intelligence.
-                        My research focus is on decision making under uncertainty, aka <em>reinforcement learning</em>.
-                        I am particularly interested in the problem of exploration: how to learn to make good decisions when you are uncertain about the world.
-                        I use these insights to improve ChatGPT to develop the "data flywheel". You can learn more in this <a href="https://www.talkrl.com/episodes/ian-osband" target="_blank" rel="noopener noreferrer">podcast</a>.
-                        </p>
-
-                        <p>Before joining OpenAI, I was a staff research scientist at <a href="https://deepmind.google.com" target="_blank" rel="noopener noreferrer">Google DeepMind</a>, initially in London, and then moving to SF to help build the "efficient agent team".
-                        I completed my Ph.D. at <a href="https://engineering.stanford.edu/" target="_blank" rel="noopener noreferrer">Stanford University</a> advised by <a href="http://web.stanford.edu/~bvr/" target="_blank" rel="noopener noreferrer">Benjamin Van Roy</a>.
-                        My thesis <a href="https://searchworks.stanford.edu/view/11891201" target="_blank" rel="noopener noreferrer">Deep Exploration via Randomized Value Functions</a> won second place in the national <a href="https://www.informs.org/Recognizing-Excellence/INFORMS-Prizes/George-B.-Dantzig-Dissertation-Award" target="_blank" rel="noopener noreferrer">Dantzig dissertation award</a>. 
-                        </p>
-
-                        <p>Before coming to Stanford, I studied maths at <a href="https://www.maths.ox.ac.uk/" target="_blank" rel="noopener noreferrer">Oxford University</a>, and worked for <a href="https://www.jpmorgan.com/pages/jpmorgan" target="_blank" rel="noopener noreferrer">J.P.Morgan</a> as a credit derivatives strategist in London and New York.
-                        If you want to get the latest scoop then check out my <a href="https://twitter.com/ianosband?lang=en" target="_blank" rel="noopener noreferrer">twitter</a>.
-                        </p>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-<!-- Research -->
-<section id="research" class="wrapper style2 special">
-    <div class="container">
-        <header class="major special">
-            <h2>Research Highlights</h2>
-            <p>For full list see <a href="https://scholar.google.com/citations?user=QA4o6eYAAAAJ&hl=en">google scholar</a>.</p>
-        </header>
-        <div class="feature-grid">
-            <div class="feature">
-                <div class="image rounded">
-                    <a href="https://arxiv.org/abs/2107.08924">
-                        <img src="images/rabbit_duck.jpg" alt="" />
-                    </a>
-                </div>
-                <div class="content">
-                    <header>
-                        <h4>Epistemic Neural Networks</h4>
-                        <p>NeurIPS 2023 Spotlight</p>
+    <!-- About me -->
+    <section id="about" class="wrapper style1">
+        <div class="container 75%">
+            <div class="row 200%">
+                <div class="5u 10u$(medium)">
+                    <header class="major">
+                        <h2>About me</h2>
+                        <div class="11u"><span class="image fit"><img src="images/ian_face.jpeg" style="max-width: 350px" alt="Ian Osband" /></span></div>
                     </header>
-                    <p>Scalable uncertainty in deep learning. Better performance than an ensemble of size=100 at cost &lt;2 particles.</p>
                 </div>
-            </div>
-            <div class="feature">
-                <div class="image rounded">
-                    <a href="https://arxiv.org/abs/1703.07608">
-                        <img src="images/bottomless_pit.png" alt="" />
-                    </a>
-                </div>
-                <div class="content">
-                    <header>
-                        <h4>Deep Exploration via Randomized Value Functions</h4>
-                        <p>JMLR 2019</p>
-                    </header>
-                    <p>Journal paper that embodies the best pieces of research from my PhD and other pieces of work from our group.</p>
-                </div>
-            </div>
-            <div class="feature">
-                <div class="image rounded">
-                    <a href="https://web.stanford.edu/~bvr/pubs/TS_Tutorial.pdf">
-                        <img src="images/dice.jpg" alt="" />
-                    </a>
-                </div>
-                <div class="content">
-                    <header>
-                        <h4>A Tutorial on Thompson Sampling</h4>
-                        <p>Foundations and Trends in Machine Learning 2020</p>
-                    </header>
-                    <p>A thoughtful tutorial around Thompson sampling to balance exploration with exploitation.</p>
-                </div>
-            </div>
-            <div class="feature">
-                <div class="image rounded">
-                    <a href="https://arxiv.org/abs/1908.03568">
-                        <img src="images/radar_plot.jpg" alt="" />
-                    </a>
-                </div>
-                <div class="content">
-                    <header>
-                        <h4>Behaviour Suite for Reinforcement Learning</h4>
-                        <p>ICLR 2020 Spotlight</p>
-                    </header>
-                    <p>Methodical benchmark for the scaling properties of RL algorithms, with open source code.</p>
-                </div>
-            </div>
-            <div class="feature">
-                <div class="image rounded">
-                    <a href="https://arxiv.org/abs/1607.00215">
-                        <img src="images/rect_conf.png" alt="" />
-                    </a>
-                </div>
-                <div class="content">
-                    <header>
-                        <h4>Why is Posterior Sampling Better than Optimism for Reinforcement Learning?</h4>
-                        <p>ICML 2016 (full oral), EWRL 2016</p>
-                    </header>
-                    <p>Computational results show PSRL dramatically outperforms UCRL2. We provide insight into why.</p>
-                </div>
-            </div>
-            <div class="feature">
-                <div class="image rounded">
-                    <a href="http://arxiv.org/abs/1602.04621">
-                        <img src="images/pacman.jpg" alt="" />
-                    </a>
-                </div>
-                <div class="content">
-                    <header>
-                        <h4>Reinforcement Learning, Bit by Bit</h4>
-                        <p>Foundations and Trends in Machine Learning 2023</p>
-                    </header>
-                    <p>An elegant perspective on reinforcement learning through the lens of information theory.</p>
+                <div class="7u$ 14u$(medium)">
+                    <br>
+                    <p>I am a researcher at <a href="https://openai.com" target="_blank" rel="noopener noreferrer">OpenAI</a> working to solve artificial intelligence. My research focus is on decision making under uncertainty, aka <em>reinforcement learning</em>. I am particularly interested in problems around exploration: learning to make good decisions when you are uncertain about the world. I use these insights to improve ChatGPT to develop the "data flywheel". You can learn more in this <a href="https://www.talkrl.com/episodes/ian-osband" target="_blank" rel="noopener noreferrer">podcast interview</a>.</p>
+
+                    <p>Before OpenAI, I was a staff research scientist at <a href="https://deepmind.google.com" target="_blank" rel="noopener noreferrer">Google DeepMind</a>. I started in London, and then moved to SF to help build the <em>efficient agent team</em>. I completed my Ph.D. at <a href="https://engineering.stanford.edu/" target="_blank" rel="noopener noreferrer">Stanford University</a> advised by <a href="http://web.stanford.edu/~bvr/" target="_blank" rel="noopener noreferrer">Benjamin Van Roy</a>. My thesis <a href="https://searchworks.stanford.edu/view/11891201" target="_blank" rel="noopener noreferrer">Deep Exploration via Randomized Value Functions</a> won second place in the national <a href="https://www.informs.org/Recognizing-Excellence/INFORMS-Prizes/George-B.-Dantzig-Dissertation-Award" target="_blank" rel="noopener noreferrer">Dantzig dissertation award</a>. </p>
+
+                    <p>Before Stanford, I studied maths at <a href="https://www.maths.ox.ac.uk/" target="_blank" rel="noopener noreferrer">Oxford University</a>, and worked for <a href="https://www.jpmorgan.com/pages/jpmorgan" target="_blank" rel="noopener noreferrer">J.P.Morgan</a> as a credit derivatives strategist in London and New York. If you want to get the latest scoop then check out my <a href="https://twitter.com/ianosband?lang=en" target="_blank" rel="noopener noreferrer">twitter</a>.</p>
+
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-        <!-- teaching
-            <section id="teaching" class="wrapper">
-                <div class="container" style="max-width: 1000px; line-height: 140%;">
 
-                    <header class="major special">
-                        <h2>Teaching</h2>
-                        <p>Past courses</p>
-                    </header>
-
-        <p id=""><a href="http://explorecourses.stanford.edu/search;jsessionid=eqe6sam4fpd614wv5fgcsffa2?q=MS%26E+142%3A+Introductory+Financial+Analysis&filter-coursestatus-Active=on&view=catalog&academicYear=20142015" target="_blank"><span class="image left"><img src="images/stocks.jpg" title="" alt="" style="max-width: 140px"></span></a><h4> MS&ampE 145 - Introduction to Financial analysis - lead instructor</h4><p>Finance for engineers aimed for over 75 undergraduate juniors and seniors. Everything from the time value of money to CAPM to elementary option pricing and portfolio optimization. Practical data analysis skills taught through spreadsheets.</p>
-
-            <br>
-            <br>
-
-       <p id=""><a href="https://web.stanford.edu/class/msande338/" target="_blank"><span class="image left"><img src="images/robots.jpg" title="" alt="" style="max-width: 140px"></span></a><h4> MS&ampE 338 - Reinforcement learning - assistant instructor</h4><p>An advanced PhD level course aimed at graduate students looking to engage in research. I managed the class research projects and gave several lectures throughout the course.</p>
-
+    <!-- Research -->
+    <section id="research" class="wrapper style2 special">
+        <div class="container">
+            <header class="major special">
+                <h2>Research Highlights</h2>
+                <p>For full list see <a href="https://scholar.google.com/citations?user=QA4o6eYAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>.</p>
+            </header>
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="image rounded"><a href="https://arxiv.org/abs/2107.08924" target="_blank" rel="noopener noreferrer"><img src="images/rabbit_duck.jpg" alt="Epistemic Neural Networks"></a></div>
+                    <div class="content">
+                        <header>
+                            <h4><a href="https://arxiv.org/abs/2107.08924" target="_blank" rel="noopener noreferrer" class="paper-title">Epistemic Neural Networks</a></h4>
+                            <p>NeurIPS 2023 Spotlight</p>
+                        </header>
+                        <p>Scalable uncertainty in deep learning. Better performance than an ensemble of size=100 at cost &lt;2 particles.</p>
+                    </div>
                 </div>
-            </section> -->
+                <div class="feature">
+                    <div class="image rounded"><a href="https://arxiv.org/abs/1703.07608" target="_blank" rel="noopener noreferrer"><img src="images/bottomless_pit.png" alt="Deep Exploration via Randomized Value Functions"></a></div>
+                    <div class="content">
+                        <header>
+                            <h4><a href="https://arxiv.org/abs/1703.07608" target="_blank" rel="noopener noreferrer" class="paper-title">Deep Exploration via Randomized Value Functions</a></h4>
+                            <p>JMLR 2019</p>
+                        </header>
+                        <p>Journal paper that embodies the best pieces of research from my PhD and other pieces of work from our group.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="image rounded"><a href="https://web.stanford.edu/~bvr/pubs/TS_Tutorial.pdf" target="_blank" rel="noopener noreferrer"><img src="images/dice.jpg" alt="A Tutorial on Thompson Sampling"></a></div>
+                    <div class="content">
+                        <header>
+                            <h4><a href="https://web.stanford.edu/~bvr/pubs/TS_Tutorial.pdf" target="_blank" rel="noopener noreferrer" class="paper-title">A Tutorial on Thompson Sampling</a></h4>
+                            <p>Foundations and Trends in Machine Learning 2020</p>
+                        </header>
+                        <p>A thoughtful tutorial around Thompson sampling to balance exploration with exploitation.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="image rounded"><a href="https://arxiv.org/abs/1607.00215" target="_blank" rel="noopener noreferrer"><img src="images/rect_conf.png" alt="Why is Posterior Sampling Better than Optimism for Reinforcement Learning?"></a></div>
+                    <div class="content">
+                        <header>
+                            <h4><a href="https://arxiv.org/abs/1607.00215" target="_blank" rel="noopener noreferrer" class="paper-title">Why is Posterior Sampling Better than Optimism for Reinforcement Learning?</a></h4>
+                            <p>ICML 2016 (full oral), EWRL 2016</p>
+                        </header>
+                        <p>Computational results show PSRL dramatically outperforms UCRL2. We provide insight into why.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="image rounded"><a href="https://arxiv.org/abs/1908.03568" target="_blank" rel="noopener noreferrer"><img src="images/radar_plot.jpg" alt="Behaviour Suite for Reinforcement Learning"></a></div>
+                    <div class="content">
+                        <header>
+                            <h4><a href="https://arxiv.org/abs/1908.03568" target="_blank" rel="noopener noreferrer" class="paper-title">Behaviour Suite for Reinforcement Learning</a></h4>
+                            <p>ICLR 2020 Spotlight</p>
+                        </header>
+                        <p>Methodical benchmark for the scaling properties of RL algorithms, with open source code.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="image rounded"><a href="http://arxiv.org/abs/1602.04621" target="_blank" rel="noopener noreferrer"><img src="images/pacman.jpg" alt="Reinforcement Learning, Bit by Bit"></a></div>
+                    <div class="content">
+                        <header>
+                            <h4><a href="http://arxiv.org/abs/1602.04621" target="_blank" rel="noopener noreferrer" class="paper-title">Reinforcement Learning, Bit by Bit</a></h4>
+                            <p>Foundations and Trends in Machine Learning 2023</p>
+                        </header>
+                        <p>An elegant perspective on reinforcement learning through the lens of information theory.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
-			<!-- Four -->
-				<section id="resume" class="wrapper style3 special">
-					<div class="container">
-						<header class="major">
-							<h2>Want more?</h2>
-                            <p>Tweet <a href="https://twitter.com/ianosband?lang=en">@IanOsband</a> for bants.</p>
-                            <p> Follow the links below, or check out my <a href="docs/iosband_resume.pdf" target="_blank"> CV </a> </p>
-						</header>
-<!-- 						<ul class="actions">
-							<li><a href="#" class="button special big">Get in touch</a></li>
-						</ul> -->
-					</div>
-				</section>
+    <!-- Resume -->
+    <section id="resume" class="wrapper style3 special">
+        <div class="container">
+            <header class="major">
+                <h2>Want more?</h2>
+                <p>Follow the links below.</p>
+                <p>Or, check out my <a href="docs/iosband_resume.pdf" target="_blank">CV</a>.</p>
+            </header>
+        </div>
+    </section>
 
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="container">
-					<ul class="icons">
-                        <li><a href="mailto:ian.osband@gmail.com" class="icon fa-mail-reply"></a></li>
-						<li><a href="https://www.facebook.com/ian.osband" class="icon fa-facebook"></a></li>
-						<li><a href="https://twitter.com/ianosband?lang=en" class="icon fa-twitter"></a></li>
-						<li><a href="https://instagram.com/ianstagrammies/" class="icon fa-instagram"></a></li>
-                        <li><a href="https://github.com/iosband" class="icon fa-github"></a></li>
-                        <li><a href="https://bitbucket.org/iosband/" class="icon fa-bitbucket"></a></li>
-                        <li><a href="https://plus.google.com/u/0/+IanOsband" class="icon fa-google-plus"></a></li>
-                        <li><a href="https://www.linkedin.com/in/iosband" class="icon fa-linkedin"></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>Copyright &copy; Ian Osband</li>
-                        <li> HTML5</li>
-						<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
-					</ul>
-				</div>
-			</footer>
-
-	</body>
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <ul class="icons">
+                <li><a href="https://twitter.com/ianosband?lang=en" target="_blank" rel="noopener noreferrer" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="https://github.com/iosband" target="_blank" rel="noopener noreferrer" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="https://instagram.com/ianstagrammies/" target="_blank" rel="noopener noreferrer" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="https://www.linkedin.com/in/iosband" target="_blank" rel="noopener noreferrer" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+            </ul>
+            <ul class="copyright">
+                <li>Copyright &copy; Ian Osband</li>
+                <li>HTML5 Design: <a href="http://templated.co" target="_blank" rel="noopener noreferrer">TEMPLATED</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
 </html>
-
