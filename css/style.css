@@ -496,68 +496,6 @@
     clear: both;
 }
 
-
-/* Responsive Design for Mobile */
-@media (max-width: 768px) { /* Adjust this breakpoint as necessary for your design */
-  .feature-grid {
-    justify-content: center; /* Centers the features in the container */
-  }
-
-  .feature {
-    flex-basis: 100%; /* Each feature takes full width */
-    flex-direction: column; /* Stack image and content vertically */
-    align-items: center; /* Center align items for mobile */
-  }
-
-  /* Since it's a single column, all text can be centrally aligned or aligned to one side as preferred */
-  .feature .content {
-    order: 2; /* Ensures content is below the image */
-    text-align: center; /* Aligns text to center, change as desired */
-  }
-
-  .feature .image {
-    order: 1; /* Ensures image is above the content */
-    max-width: 250px; /* Maximum width for the image */
-    max-height: 250px; /* Maximum height for the image */
-    width: 80%; /* Adjust image width on mobile as needed */
-    height: auto; /* Height can be auto to maintain aspect ratio of image */
-  }
-
-  /* Adjust image settings for mobile, set max height and width while maintaining aspect ratio */
-  .feature-grid .feature .image img {
-    max-width: 100%; /* Image fills its container */
-    max-height: 250px; /* Maximum height for the image */
-    width: auto; /* Width is set to auto to maintain aspect ratio */
-    height: auto; /* Height is set to auto to maintain aspect ratio */
-    object-fit: contain; /* Ensures the whole image is visible */
-  }
-    /* This targets the container of the about section */
-  .container.75% {
-    width: 100% !important; /* Makes the container take full width */
-    padding: 0 2em; /* Adds some padding on the sides */
-  }
-  
-  /* Adjust the row within the container for smaller screens */
-  .row.200% {
-    display: block; /* Stack elements instead of side-by-side */
-  }
-  
-  /* Targeting the classes for image and text containers in the 'About Me' section */
-  .5u, .10u$(medium), .7u$, .14u$(medium) {
-    width: 100% !important; /* Each element takes full width */
-    clear: both; /* Clears the floats if any */
-    text-align: center; /* Centers the text */
-    margin: 0 0 2em 0; /* Adds some margin at the bottom of each section */
-  }
-
-  /* Additional adjustments to the image to ensure it scales nicely and is not too large */
-  .image.fit img {
-    max-width: 100%; /* Ensures image is not larger than its container */
-    height: auto; /* Maintains the aspect ratio */
-    margin: 0 auto 2em; /* Adds margin at the bottom and auto on the sides to center it */
-  }
-}
-
 /* Icon */
 
 	.icon {
@@ -1279,3 +1217,53 @@
   background: #d7e4ed;
 }
 
+
+
+@media (max-width: 768px) {
+  .feature-grid {
+    justify-content: center;
+  }
+
+  .feature {
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .feature .content {
+    order: 2;
+    text-align: center;
+  }
+
+  .feature .image.rounded {
+    order: 1;
+    max-width: 250px;
+    width: 100%; /* Make the image container take full width */
+    margin: 0 auto 2em;
+    display: flex; /* Use flexbox to center the image */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+  }
+
+  .feature .image.rounded a {
+    width: 100%; /* Allow the anchor to fill the width of its container */
+    display: block; /* Make the anchor tag a block element to fill its container */
+  }
+
+  .feature .image.rounded img {
+    max-width: 100%;
+    max-height: 250px; /* Set a max-height for the image */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Block display to respect the margin: auto */
+  }
+
+  /* Remove any specific float or alignment styles for images on mobile */
+  .image.left, .image.right, .image.fit, .image {
+    float: none;
+    padding: 0;
+    text-align: center;
+    display: block; /* Override any other display properties */
+    margin: 0 auto; /* Center the image */
+  }
+}
